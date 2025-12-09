@@ -20,7 +20,6 @@ namespace progahell
             Score = score;
             NextSceneId = nextSceneId;
         }
-
         public void OnClick(SceneManager sceneManager, ScoreCalculator scoreCalc)
         {
             scoreCalc.AddScore(Score);

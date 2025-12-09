@@ -36,7 +36,5 @@ namespace progahell
                 // обработка ошибки
             }
         }
-
-
     }
 }

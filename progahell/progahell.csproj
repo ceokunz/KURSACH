@@ -9,7 +9,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Res\Z_angry.png" />
+    <None Remove="Res\Z_happy.png" />
+    <None Remove="Res\Z_neutral.png" />
+    <None Remove="Res\Z_sad.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Characters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Res\Z_angry.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Z_happy.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Z_neutral.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Z_sad.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

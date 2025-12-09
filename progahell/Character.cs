@@ -14,6 +14,8 @@ namespace progahell
 
         private readonly Dictionary<EmoteType, string> SpritePaths;
 
+        public event Action<string> SpeakRequested;
+
         public string Name
             { get { return name; } set { name = value; } }
         public EmoteType CurrentEmote { get { return currentEmote; } set { currentEmote = value; } }
@@ -33,8 +35,11 @@ namespace progahell
 
         public virtual void OnSpeak()
         {
-           //короч при появлении разных персонажей будет разная анимация, я не знаю куда еще наследку пихать
+            SpeakRequested?.Invoke(GetAnimationType());
+            //короч при появлении разных персонажей будет разная анимация, я не знаю куда еще наследку пихать
         }
+
+        protected virtual string GetAnimationType() => "none";
 
     }
 }
