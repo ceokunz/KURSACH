@@ -24,7 +24,7 @@ namespace progahell
         { get { return description; } set { description = value; } }
 
         public string BackgroundPath
-        { get { return BackgroundPath; } set { BackgroundPath = value; } }
+        { get { return backgroundPath; } set { backgroundPath = value; } }
 
         public string Id
         { get { return id; } set { id= value; } }
