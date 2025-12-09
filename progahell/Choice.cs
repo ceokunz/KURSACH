@@ -21,9 +21,10 @@ namespace progahell
             NextSceneId = nextSceneId;
         }
 
-        public void OnClick()
+        public void OnClick(SceneManager sceneManager, ScoreCalculator scoreCalc)
         {
-            throw new NotImplementedException();
+            scoreCalc.AddScore(Score);
+            sceneManager.GoTo(NextSceneId);
         }
     }
 }

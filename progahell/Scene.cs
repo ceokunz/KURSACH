@@ -11,11 +11,11 @@ namespace progahell
     {
         string title;
         string description;
-        Image background; 
+        string backgroundPath;
         string id;
-        public List<Choice> Choices { get; } = new List<Choice>();
 
-       
+        public List<Choice> Choices { get; } = new List<Choice>();
+        public List<DialogueLine> Dialogue { get; set; }
 
         public string Title
         { get { return title; } set { title = value; } }
@@ -23,26 +23,19 @@ namespace progahell
         public string Description
         { get { return description; } set { description = value; } }
 
-        public Image Background
-        { get { return background; } set { background = value; } }
+        public string BackgroundPath
+        { get { return BackgroundPath; } set { BackgroundPath = value; } }
 
         public string Id
         { get { return id; } set { id= value; } }
 
-        public Scene(string id, string title, string description, Image background)
+        public Scene(string id, string title, string description, string backgroundPath)
         {
             Id = id;
             Title = title;
             Description = description;
-            Background = background;
+            BackgroundPath = backgroundPath;
             
         }
-
-        public void Execute()
-        {
-            // показывает сцену в интерфейсе
-        }
-
-        // что ещё необходимо сцене?
     }
 }

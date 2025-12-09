@@ -11,6 +11,8 @@ namespace progahell
         private readonly Dictionary<string, Scene> scenes = new();
         public Scene CurrentScene { get; private set; }
 
+        public event Action<Scene> SceneChanged;
+
         public void AddScene(Scene scene)
         {
             scenes[scene.Id] = scene;
@@ -19,15 +21,15 @@ namespace progahell
         public void Start(string startSceneId)
         {
             CurrentScene = scenes[startSceneId];
-            ShowCurrentScene();
+            SceneChanged?.Invoke(CurrentScene);
         }
 
         public void GoTo(string sceneId)
         {
-            if (scenes.TryGetValue(sceneId, out var scene))
+            if (scenes.TryGetValue(sceneId, out Scene scene))
             {
                 CurrentScene = scene;
-                ShowCurrentScene();
+                SceneChanged?.Invoke(CurrentScene);
             }
             else
             {
@@ -35,9 +37,6 @@ namespace progahell
             }
         }
 
-        private void ShowCurrentScene()
-        {
-            // обновляет WPF UI: фон, текст, кнопки с выбором
-        }
+
     }
 }
