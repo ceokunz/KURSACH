@@ -16,6 +16,7 @@ namespace progahell
 
         public List<Choice> Choices { get; } = new List<Choice>();
         public List<DialogueLine> Dialogue { get; set; }
+        public Dictionary<CharacterPosition, string> CharacterLayout { get; } = new();
 
         public string Title
         { get { return title; } set { title = value; } }
@@ -37,5 +38,17 @@ namespace progahell
             BackgroundPath = backgroundPath;
             
         }
+
+        public void SetCharacter(CharacterPosition position, string characterId)
+        {
+            CharacterLayout[position] = characterId;
+        }
+    }
+
+    public enum CharacterPosition //будем делать позиции чаров на сцене
+    {
+        Left,
+        Center,
+        Right
     }
 }
