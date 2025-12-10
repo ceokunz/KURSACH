@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:progahell"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="ProgaHELL" Height="450" Width="800">
     <Grid>
+        <Grid Background="Pink">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.55*"/>
+            </Grid.RowDefinitions>
 
+            <Grid Margin="0,0,0,-150">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Image Source="/Res/Z_angry.png" Grid.Column="0" x:Name="LeftPos"></Image>
+                <Image Source="/Res/Z_sad.png" Grid.Column="1" x:Name="CenterPos"></Image>
+                <Image Source="/Res/Z_happy.png" Grid.Column="2" x:Name="RightPos"></Image>
+            </Grid>
+
+            <Grid Grid.Row="1" Panel.ZIndex="1">
+                <Border Background="AliceBlue" Margin="10">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Text="Name" Height="30"></TextBlock>
+                        <TextBlock Grid.Row="1"></TextBlock>
+                        <Grid Grid.Row="2" Height="30" VerticalAlignment="Bottom">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Button Grid.Column="0" Content="SAVE"></Button>
+                            <Button Grid.Column="1" Content="EXIT"></Button>
+                            <Button Grid.Column="4" Content="NEXT"></Button>
+                        </Grid>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
     </Grid>
+    
 </Window>

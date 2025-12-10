@@ -11,8 +11,6 @@ namespace progahell
         string Text { get; }
         string Type { get; }
         int Score { get; }
-
-        void OnClick(); // функция для выбора в самой игре
     }
 
     public enum EmoteType // типы эмоций спрайтов персонажей
