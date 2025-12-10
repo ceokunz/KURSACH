@@ -42,9 +42,7 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="0" Content="SAVE"></Button>
-                            <Button Grid.Column="1" Content="EXIT"></Button>
-                            <Button Grid.Column="4" Content="NEXT"></Button>
+                            <Button Grid.Column="4" Content="NEXT" Click="Next_Click"></Button>
                         </Grid>
                     </Grid>
                 </Border>

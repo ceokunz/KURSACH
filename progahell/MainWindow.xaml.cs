@@ -19,6 +19,12 @@ namespace progahell
         public MainWindow()
         {
             InitializeComponent();
+            // запуск json-а с информацией о всех сценах и персонажах ну и сериализатар гавнатар. Попроси друга сделать))
+        }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
