@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:progahell"
         mc:Ignorable="d"
-        Title="ProgaHELL" Height="450" Width="800">
+        Title="ProgaHELL" Height="900" Width="1600">
     <Grid>
         <Grid Background="Pink">
             <Grid.RowDefinitions>
@@ -13,7 +13,7 @@
                 <RowDefinition Height="0.55*"/>
             </Grid.RowDefinitions>
 
-            <Grid Margin="0,0,0,-150">
+            <Grid Margin="0,0,0,-300">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -32,9 +32,9 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Text="Name" Height="30"></TextBlock>
+                        <TextBlock Grid.Row="0" Text="Name" Height="60" FontSize="40"></TextBlock>
                         <TextBlock Grid.Row="1"></TextBlock>
-                        <Grid Grid.Row="2" Height="30" VerticalAlignment="Bottom">
+                        <Grid Grid.Row="2" Height="60" VerticalAlignment="Bottom">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
