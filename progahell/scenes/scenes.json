@@ -6,9 +6,9 @@
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
       {
-        "SpeakerId": "zlata",
-        "Text": "новеллы не будет, я съела валеру",
-        "Emote": "Angry"
+        "SpeakerId": "kaz",
+        "Text": "а вормикс по руски это короче",
+        "Emote": "Happy"
       }
     ],
     "Choices": [
@@ -26,7 +26,9 @@
       }
     ],
     "CharacterLayout": {
-      "Left": "zlata"
+      "Left": "zlata",
+      "Center": "kaz",
+      "Right": "valera"
     }
   },
   {

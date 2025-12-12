@@ -8,5 +8,25 @@
       "Angry": "Res/Z_angry.png",
       "Neutral": "Res/Z_neutral.png"
     }
+  },
+  {
+    "Id": "valera",
+    "Name": "Жирнз",
+    "SpritePaths": {
+      "Happy": "Res/V_happy.png",
+      "Sad": "Res/Z_sad.png",
+      "Angry": "Res/Z_angry.png",
+      "Neutral": "Res/Z_neutral.png"
+    }
+  },
+  {
+    "Id": "kaz",
+    "Name": "Казино",
+    "SpritePaths": {
+      "Happy": "Res/K_happy.png",
+      "Sad": "Res/Z_sad.png",
+      "Angry": "Res/Z_angry.png",
+      "Neutral": "Res/Z_neutral.png"
+    }
   }
 ]

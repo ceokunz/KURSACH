@@ -26,19 +26,11 @@ namespace progahell
         private int currentDialogueIndex = 0;
         public MainWindow()
         {
-            try
-            {
-                InitializeComponent();
-                LoadGameData();
-                sceneManager.SceneChanged += OnSceneChanged;
-                sceneManager.Start("start");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Ошибка при запуске:\n{ex}", "Критическая ошибка",
-                                MessageBoxButton.OK, MessageBoxImage.Error);
-                throw; // или Application.Current.Shutdown();
-            }
+            InitializeComponent();
+            LoadGameData(); //загрузка файлов игры
+
+            sceneManager.SceneChanged += OnSceneChanged;
+            sceneManager.Start("start");
         }
 
         private void LoadGameData()
@@ -51,7 +43,7 @@ namespace progahell
             foreach (var c in charList)
             {
                 var character = new Character(c.Id, c.Name, new Dictionary<EmoteType, string>());
-                character.InitializeFromJson(c.SpritePaths); // передаём Dictionary<string, string>
+                character.InitializeFromJson(c.SpritePaths);
                 characterManager.AddCharacter(character);
             }
 
