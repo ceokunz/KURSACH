@@ -3,7 +3,7 @@
     "Id": "start",
     "Title": "Начало",
     "Description": "Вы получаете задание на курсач",
-    "BackgroundPath": "/Res/Background_Polegon.png",
+    "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
       {
         "SpeakerId": "zlata",
@@ -33,7 +33,7 @@
     "Id": "zlata_room",
     "Title": "Берлога Златы",
     "Description": "Вы сидите у Златы дома",
-    "BackgroundPath": "/Res/Background_Polegon.png",
+    "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [],
     "Choices": [],
     "CharacterLayout": {}

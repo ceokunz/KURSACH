@@ -21,18 +21,29 @@ namespace progahell
         private SceneManager sceneManager = new();
         private CharacterManager characterManager = new();
         private ScoreCalculator scoreCalculator = new();
+
+        private List<DialogueLine> currentDialogue = new();
+        private int currentDialogueIndex = 0;
         public MainWindow()
         {
-            InitializeComponent();
-            // запуск json-а с информацией о всех сценах и персонажах
-            LoadGameData();
-            sceneManager.SceneChanged += OnSceneChanged;
-            sceneManager.Start("start");
+            try
+            {
+                InitializeComponent();
+                LoadGameData();
+                sceneManager.SceneChanged += OnSceneChanged;
+                sceneManager.Start("start");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка при запуске:\n{ex}", "Критическая ошибка",
+                                MessageBoxButton.OK, MessageBoxImage.Error);
+                throw; // или Application.Current.Shutdown();
+            }
         }
 
         private void LoadGameData()
         {
-            // Персонажи
+            // Чарики
             var charList = JsonSerializer.Deserialize<List<CharacterJsonModel>>(
                 File.ReadAllText("Res/characters.json"),
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
@@ -44,7 +55,7 @@ namespace progahell
                 characterManager.AddCharacter(character);
             }
 
-            // Сцены
+            // Сцени
             var sceneList = JsonSerializer.Deserialize<List<SceneJsonModel>>(
                 File.ReadAllText("scenes/scenes.json"),
                 new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
@@ -65,7 +76,131 @@ namespace progahell
 
         private void OnSceneChanged(Scene scene)
         {
-            
+            if (!string.IsNullOrWhiteSpace(scene.BackgroundPath))
+            {
+                try
+                {
+                    // Убери ведущий '/' из пути!
+                    string cleanPath = scene.BackgroundPath.TrimStart('/');
+
+                    var bitmap = new BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.UriSource = new Uri(cleanPath, UriKind.Relative); // ← относительный путь внутри .exe
+                    bitmap.CacheOption = BitmapCacheOption.OnLoad; // чтобы не держать файл открытым
+                    bitmap.EndInit();
+                    bitmap.Freeze(); // можно использовать из разных потоков
+
+                    MainGrid.Background = new ImageBrush(bitmap)
+                    {
+                        Stretch = Stretch.UniformToFill
+                    };
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Ошибка фона: {ex}");
+                    MainGrid.Background = Brushes.LightGray;
+                }
+            }
+            else
+            {
+                MainGrid.Background = Brushes.White;
+            }
+
+            // сброс спрайтов
+            ClearCharacterPositions();
+
+            // показываем чаров из лейаута
+            foreach (var layout in scene.CharacterLayout)
+            {
+                var position = layout.Key;
+                var charId = layout.Value;
+                var character = characterManager.GetCharacter(charId);
+
+                if (character != null)
+                {
+                    SetCharacterSprite(position, character.CurrentSpritePath);
+                }
+            }
+
+            // сброс диалог
+            currentDialogueIndex = 0;
+            currentDialogue = scene.Dialogue ?? new List<DialogueLine>();
+            ShowNextDialogueLine();
+        }
+
+        private void ClearCharacterPositions()
+        {
+            LeftPos.Source = null;
+            LeftPos.Visibility = Visibility.Hidden;
+
+            CenterPos.Source = null;
+            CenterPos.Visibility = Visibility.Hidden;
+
+            RightPos.Source = null;
+            RightPos.Visibility = Visibility.Hidden;
+        }
+
+        private void SetCharacterSprite(CharacterPosition position, string spritePath)
+        {
+            Image targetImage = position switch
+            {
+                CharacterPosition.Left => LeftPos,
+                CharacterPosition.Center => CenterPos,
+                CharacterPosition.Right => RightPos,
+                _ => null
+            };
+
+            if (targetImage != null && !string.IsNullOrEmpty(spritePath))
+            {
+                try
+                {
+                    targetImage.Source = new BitmapImage(new Uri(spritePath, UriKind.Relative));
+                    targetImage.Visibility = Visibility.Visible;
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Ошибка загрузки спрайта: {ex.Message}");
+                    targetImage.Visibility = Visibility.Hidden;
+                }
+            }
+            else if (targetImage != null)
+            {
+                targetImage.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void ShowNextDialogueLine()
+        {
+            if (currentDialogueIndex < currentDialogue.Count)
+            {
+                var line = currentDialogue[currentDialogueIndex];
+                var speaker = characterManager.GetCharacter(line.SpeakerId);
+
+                SpeakerNameBlock.Text = speaker?.Name ?? "???";
+                DialogueTextBlock.Text = line.Text;
+
+                // обновляем эмоцию спикера
+                if (speaker != null)
+                {
+                    // временный эмоут
+                    speaker.SetEmote(line.EmoteEnum);
+
+                    var currentScene = sceneManager.CurrentScene;
+                    foreach (var kvp in currentScene.CharacterLayout)
+                    {
+                        if (kvp.Value == line.SpeakerId)
+                        {
+                            SetCharacterSprite(kvp.Key, speaker.CurrentSpritePath);
+                            break;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                SpeakerNameBlock.Text = "";
+                DialogueTextBlock.Text = "[Конец диалога]";
+            }
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)

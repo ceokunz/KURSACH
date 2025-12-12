@@ -3,10 +3,10 @@
     "Id": "zlata",
     "Name": "Злата Владимировна",
     "SpritePaths": {
-      "Happy": "/Res/Z_happy.png",
-      "Sad": "/Res/Z_sad.png",
-      "Angry": "/Res/Z_angry.png",
-      "Neutral": "/Res/Z_neutral.png"
+      "Happy": "Res/Z_happy.png",
+      "Sad": "Res/Z_sad.png",
+      "Angry": "Res/Z_angry.png",
+      "Neutral": "Res/Z_neutral.png"
     }
   }
 ]
