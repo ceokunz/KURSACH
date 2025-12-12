@@ -80,16 +80,10 @@ namespace progahell
             {
                 try
                 {
-                    // Убери ведущий '/' из пути!
                     string cleanPath = scene.BackgroundPath.TrimStart('/');
-
-                    var bitmap = new BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.UriSource = new Uri(cleanPath, UriKind.Relative); // ← относительный путь внутри .exe
-                    bitmap.CacheOption = BitmapCacheOption.OnLoad; // чтобы не держать файл открытым
-                    bitmap.EndInit();
-                    bitmap.Freeze(); // можно использовать из разных потоков
-
+                    var uri = new Uri($"pack://application:,,,/{cleanPath}");
+                    var bitmap = new BitmapImage(uri);
+                    bitmap.Freeze();
                     MainGrid.Background = new ImageBrush(bitmap)
                     {
                         Stretch = Stretch.UniformToFill
