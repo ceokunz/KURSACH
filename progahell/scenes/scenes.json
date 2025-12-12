@@ -1,0 +1,41 @@
+[
+  {
+    "Id": "start",
+    "Title": "Начало",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "/Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "zlata",
+        "Text": "hello world",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [
+      {
+        "Text": "Поплакать",
+        "Type": "sad",
+        "Score": 10,
+        "NextSceneId": "zlata_room"
+      },
+      {
+        "Text": "Поставить свечку в церкви",
+        "Type": "normal",
+        "Score": 20,
+        "NextSceneId": "zlata_room"
+      }
+    ],
+    "CharacterLayout": {
+      "Left": "zlata"
+    }
+  },
+  {
+    "Id": "zlata_room",
+    "Title": "Берлога Златы",
+    "Description": "Вы сидите у Златы дома",
+    "BackgroundPath": "/Res/Background_Polegon.png",
+    "Dialogue": [],
+    "Choices": [],
+    "CharacterLayout": {}
+  }
+]

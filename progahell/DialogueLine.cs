@@ -8,8 +8,13 @@ namespace progahell
 {
     public class DialogueLine
     {
-        public string SpeakerId { get; set; }
-        public string Text { get; set; }
-        public EmoteType Emote { get; set; }
+        public string SpeakerId { get; set; } = "";
+        public string Text { get; set; } = "";
+        public string Emote { get; set; } = "Neutral"; 
+
+        public EmoteType EmoteEnum
+        {
+            get => Enum.TryParse<EmoteType>(Emote, true, out var e) ? e : EmoteType.Neutral;
+        }
     }
 }

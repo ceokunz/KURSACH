@@ -13,10 +13,13 @@ namespace progahell
         string description;
         string backgroundPath;
         string id;
+        private Dictionary<CharacterPosition, string> characterLayout = new();
+
 
         public List<Choice> Choices { get; } = new List<Choice>();
         public List<DialogueLine> Dialogue { get; set; }
-        public Dictionary<CharacterPosition, string> CharacterLayout { get; } = new();
+
+        public Dictionary<CharacterPosition, string> CharacterLayout => characterLayout;
 
         public string Title
         { get { return title; } set { title = value; } }
@@ -30,6 +33,8 @@ namespace progahell
         public string Id
         { get { return id; } set { id= value; } }
 
+        public Scene() { }
+
         public Scene(string id, string title, string description, string backgroundPath)
         {
             Id = id;
@@ -41,7 +46,19 @@ namespace progahell
 
         public void SetCharacter(CharacterPosition position, string characterId)
         {
-            CharacterLayout[position] = characterId;
+            CharacterLayout[position] = characterId; // ломай ломай код мы же миллионеры 
+        }
+
+        public void InitializeLayoutFromJson(Dictionary<string, string> jsonLayout)
+        {
+            characterLayout.Clear();
+            foreach (var kvp in jsonLayout)
+            {
+                if (Enum.TryParse<CharacterPosition>(kvp.Key, true, out var pos))
+                {
+                    characterLayout[pos] = kvp.Value;
+                }
+            }
         }
     }
 

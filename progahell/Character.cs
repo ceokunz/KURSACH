@@ -12,8 +12,7 @@ namespace progahell
         string name;
         EmoteType currentEmote;
         string id;
-
-        private readonly Dictionary<EmoteType, string> SpritePaths;
+        private Dictionary<EmoteType, string> spritePaths = new();
 
         public event Action<string> SpeakRequested;
 
@@ -23,13 +22,29 @@ namespace progahell
             { get { return currentEmote; } set { currentEmote = value; } }
         public string Id
             { get { return id; } set { id = value; } }
-        public string CurrentSpritePath => SpritePaths[CurrentEmote];
+        public Dictionary<EmoteType, string> SpritePaths => spritePaths;
+
+        public string CurrentSpritePath => spritePaths.TryGetValue(CurrentEmote, out var path) ? path : "";
+
+        public Character() { }
 
         public Character(string id, string name, Dictionary<EmoteType, string> spritePaths)
         {
             Id = id;
             Name = name;
-            SpritePaths = spritePaths;
+            this.spritePaths = new Dictionary<EmoteType, string>(spritePaths);
+        }
+
+        public void InitializeFromJson(Dictionary<string, string> jsonSprites)
+        {
+            spritePaths.Clear();
+            foreach (var kvp in jsonSprites)
+            {
+                if (Enum.TryParse<EmoteType>(kvp.Key, true, out var emote))
+                {
+                    spritePaths[emote] = kvp.Value;
+                }
+            }
         }
 
         public void SetEmote(EmoteType emote)

@@ -13,6 +13,8 @@ namespace progahell
         public int Score { get; }
         public string NextSceneId { get; }
 
+        public Choice() { }
+
         public Choice(string text, string type, int score, string nextSceneId)
         {
             Text = text;

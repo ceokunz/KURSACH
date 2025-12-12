@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Res\Background_Polegon.png" />
     <None Remove="Res\Z_angry.png" />
     <None Remove="Res\Z_happy.png" />
     <None Remove="Res\Z_neutral.png" />
@@ -16,10 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Characters\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <Resource Include="Res\Background_Polegon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Res\Z_angry.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -32,6 +32,15 @@
     <Resource Include="Res\Z_sad.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Res\characters.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="scenes\scenes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
