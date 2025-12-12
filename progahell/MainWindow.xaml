@@ -33,7 +33,7 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock x:Name="SpeakerNameBlock" Grid.Row="0" Text="" Height="60" FontSize="40"></TextBlock>
-                        <TextBlock x:Name="DialogueTextBlock" Grid.Row="1"></TextBlock>
+                        <TextBlock x:Name="DialogueTextBlock" Grid.Row="1" FontSize="30"></TextBlock>
                         <Grid Grid.Row="2" Height="60" VerticalAlignment="Bottom">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition/>
