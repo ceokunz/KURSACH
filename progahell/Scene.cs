@@ -31,7 +31,7 @@ namespace progahell
         { get { return backgroundPath; } set { backgroundPath = value; } }
 
         public string Id
-        { get { return id; } set { id= value; } }
+        { get { return id; } set { id= value; } } //попробуй тут везде приваточки влепить
 
         public Scene() { }
 
