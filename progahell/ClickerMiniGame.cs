@@ -8,9 +8,34 @@ namespace progahell
 {
     public class ClickerMiniGame : IMiniGame
     {
-        public string Name => "Clicker";
-        public int MaxScore => 10;
-        public int PlayerScore { get; private set; }
+        string name;
+        int maxScore;
+        int playerScore;
+
+        public string Name
+        {
+            get { return name; }
+            private set { name = value; }
+        }
+
+        public int MaxScore
+        {
+            get { return maxScore; }
+            private set { maxScore = value; }
+        }
+
+        public int PlayerScore 
+        { 
+            get { return playerScore; }
+            private set {  playerScore = value; }
+        }
+
+        public ClickerMiniGame (string name, int maxScore, int playerScore)     
+        {
+            name = "Clicker";
+            maxScore = 10;
+            PlayerScore = playerScore;
+        }
 
         public event Action<IMiniGame> Completed;
 

@@ -17,11 +17,11 @@ namespace progahell
         public event Action<string> SpeakRequested;
 
         public string Name
-            { get { return name; } set { name = value; } }
+            { get { return name; } private set { name = value; } }
         public EmoteType CurrentEmote 
-            { get { return currentEmote; } set { currentEmote = value; } }
+            { get { return currentEmote; } private set { currentEmote = value; } }
         public string Id
-            { get { return id; } set { id = value; } }
+            { get { return id; } private set { id = value; } }
         public Dictionary<EmoteType, string> SpritePaths => spritePaths;
 
         public string CurrentSpritePath => spritePaths.TryGetValue(CurrentEmote, out var path) ? path : "";

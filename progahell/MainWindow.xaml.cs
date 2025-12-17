@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Media.Animation;
 
 namespace progahell
 {
@@ -109,7 +110,7 @@ namespace progahell
             }
 
             // сброс диалог
-            currentDialogueIndex = 0;
+            currentDialogueIndex = -1;
             currentDialogue = scene.Dialogue ?? new List<DialogueLine>();
             ShowNextDialogueLine();
         }
@@ -159,6 +160,7 @@ namespace progahell
         {
             if (currentDialogueIndex < currentDialogue.Count)
             {
+                currentDialogueIndex++;
                 var line = currentDialogue[currentDialogueIndex];
                 var speaker = characterManager.GetCharacter(line.SpeakerId);
 
@@ -170,6 +172,7 @@ namespace progahell
                 {
                     // временный эмоут
                     speaker.SetEmote(line.EmoteEnum);
+                    AnimateJump();
 
                     var currentScene = sceneManager.CurrentScene;
                     foreach (var kvp in currentScene.CharacterLayout)
@@ -184,14 +187,51 @@ namespace progahell
             }
             else
             {
-                SpeakerNameBlock.Text = "";
-                DialogueTextBlock.Text = "[Конец диалога]";
+                ShowChoices();
             }
+        }
+
+        private void ShowChoices()
+        {
+            Scene scene = sceneManager.CurrentScene;
+            if (scene.Choices.Count > 0)
+            {
+                ChoisesPanel.ItemsSource = scene.Choices;
+                ChoisesPanel.Visibility = Visibility.Visible;
+            }
+
         }
 
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            // ymer
+            ShowNextDialogueLine();
+        }
+
+
+        private void AnimateJump()
+        {
+            var bounceY = new DoubleAnimation(0, -50, TimeSpan.FromMilliseconds(100));
+            var fallY = new DoubleAnimation(-50, 0, TimeSpan.FromMilliseconds(100));
+
+            var transformGroup = new TransformGroup();
+            var translateTransform = new TranslateTransform();
+            transformGroup.Children.Add(translateTransform);
+
+            LeftPos.RenderTransformOrigin = new Point(0.5, 0.5);
+            LeftPos.RenderTransform = transformGroup;
+
+            CenterPos.RenderTransformOrigin = new Point(0.5, 0.5);
+            CenterPos.RenderTransform = transformGroup;
+
+            RightPos.RenderTransformOrigin = new Point(0.5, 0.5);
+            RightPos.RenderTransform = transformGroup;
+
+            bounceY.Completed += (s, e) =>
+            {
+                translateTransform.BeginAnimation(TranslateTransform.YProperty, fallY);
+            };
+
+            translateTransform.BeginAnimation(TranslateTransform.YProperty, bounceY);
         }
     }
     public class CharacterJsonModel

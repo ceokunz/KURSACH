@@ -6,14 +6,36 @@ using System.Threading.Tasks;
 
 namespace progahell
 {
-    public class Choice : IChoice
+    public class Choice
     {
-        public string Text { get; }
-        public string Type { get; }    
-        public int Score { get; }
-        public string NextSceneId { get; }
+        string text;
 
-        public Choice() { }
+        string type;
+
+        int score;
+
+        string nextSceneId;
+
+        public string Text
+        { 
+            get { return text; } 
+            private set {  text = value; }       
+        }
+        public string Type
+        {
+            get { return type; }
+            private set { type = value; }
+        }
+        public int Score
+        {
+            get { return score; }
+            private set { score = value; }
+        }
+        public string NextSceneId
+        {
+            get { return nextSceneId; }
+            private set { nextSceneId = value; }
+        }
 
         public Choice(string text, string type, int score, string nextSceneId)
         {
