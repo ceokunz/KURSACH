@@ -24,22 +24,27 @@
                 <Image Grid.Column="2" x:Name="RightPos"></Image>
             </Grid>
 
-            <Grid x:Name="Choices" Margin="0,0,0,-300">
-                <ItemsControl x:Name="ChoisesPanel" Visibility="Hidden">
+            <Grid x:Name="Choices" Margin="0,0,0,-300" Panel.ZIndex="3">
+                <ItemsControl x:Name="ChoicesPanel" Visibility="Collapsed">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
-                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Center"/>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Button Content="{Binding Text}" 
-                            Tag="{Binding}" 
-                            /> <!--Click="ChoiceButton_Click"--> 
+                            Tag="{Binding}" Click="ChoiceButton_Click" Margin="5" Padding="10,5"
+                        MinWidth="100"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </Grid>
+
+            <Grid x:Name="Choices_Back" Margin="0,0,0,-400" Panel.ZIndex="2" Visibility="Hidden">
+                <Image Source="Res/choices_back.png" Stretch="Fill"></Image>
+            </Grid>
+
 
             <Grid Grid.Row="1" Panel.ZIndex="1">
                 <Border Background="AliceBlue" Margin="10">
@@ -59,7 +64,7 @@
                                 <ColumnDefinition/>
                                 <ColumnDefinition/>
                             </Grid.ColumnDefinitions>
-                            <Button Grid.Column="4" Content="NEXT" Click="Next_Click"></Button>
+                            <Button x:Name="NextButton" Grid.Column="4" Content="NEXT" Click="Next_Click" Visibility="Visible"></Button>
                         </Grid>
                     </Grid>
                 </Border>

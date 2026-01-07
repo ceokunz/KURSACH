@@ -10,6 +10,8 @@
 
   <ItemGroup>
     <None Remove="Res\Background_Polegon.png" />
+    <None Remove="Res\Background_Zlata_Room.png" />
+    <None Remove="Res\choices_back.png" />
     <None Remove="Res\K_happy.png" />
     <None Remove="Res\V_angry.png" />
     <None Remove="Res\V_happy.png" />
@@ -22,6 +24,10 @@
   <ItemGroup>
     <Resource Include="Res\Background_Polegon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Zlata_Room.png" />
+    <Resource Include="Res\choices_back.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\K_happy.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

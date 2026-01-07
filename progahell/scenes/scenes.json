@@ -16,6 +16,11 @@
         "Emote": "Angry"
       },
       {
+        "SpeakerId": "kaz",
+        "Text": "ЧЕРВЯТИКС))))",
+        "Emote": "Happy"
+      },
+      {
         "SpeakerId": "zlata",
         "Text": "вы дауны?",
         "Emote": "Sad"
@@ -51,9 +56,52 @@
     "Id": "zlata_room",
     "Title": "Берлога Златы",
     "Description": "Вы сидите у Златы дома",
-    "BackgroundPath": "Res/Background_Polegon.png",
-    "Dialogue": [],
-    "Choices": [],
-    "CharacterLayout": {}
+    "BackgroundPath": "Res/Background_Zlata_Room.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "valera",
+        "Text": "Итак мы снова здесь рыцарь Златолион... Пора начинать делать ПиРОГИ",
+        "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "А может не надо Валер) Смотри у меня крутой стендап поперечново есть",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "КОООООД",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Не чет не хочу пока",
+        "Emote": "Angry"
+      }
+    ],
+    "Choices": [
+      {
+        "Text": "Составить план проекта",
+        "Type": "sad",
+        "Score": 15,
+        "NextSceneId": "x"
+      },
+      {
+        "Text": "Попить чай",
+        "Type": "normal",
+        "Score": -5,
+        "NextSceneId": "x"
+      },
+      {
+        "Text": "Сдендап Поперечного на 5 часов",
+        "Type": "normal",
+        "Score": -20,
+        "NextSceneId": "x"
+      }
+    ],
+    "CharacterLayout": {
+      "Left": "zlata",
+      "Right": "valera"
+    }
   }
 ]

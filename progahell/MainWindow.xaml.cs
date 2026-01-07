@@ -22,6 +22,8 @@ namespace progahell
 
         private List<DialogueLine> currentDialogue = new();
         private int currentDialogueIndex = 0;
+
+        private bool isShowingChoices = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -78,6 +80,7 @@ namespace progahell
                     {
                         Stretch = Stretch.UniformToFill
                     };
+
                 }
                 catch (Exception ex)
                 {
@@ -107,7 +110,7 @@ namespace progahell
             }
 
             // сброс диалог
-            currentDialogueIndex = -1;
+            currentDialogueIndex = 0; 
             currentDialogue = scene.Dialogue ?? new List<DialogueLine>();
             ShowNextDialogueLine();
         }
@@ -157,9 +160,8 @@ namespace progahell
         {
             if (currentDialogueIndex < currentDialogue.Count)
             {
-                currentDialogueIndex++;
                 var line = currentDialogue[currentDialogueIndex];
-                var speaker = characterManager.GetCharacter(line.SpeakerId);
+                Character speaker = characterManager.GetCharacter(line.SpeakerId);
 
                 SpeakerNameBlock.Text = speaker?.Name ?? "???";
                 DialogueTextBlock.Text = line.Text;
@@ -171,7 +173,7 @@ namespace progahell
                     speaker.SetEmote(line.EmoteEnum);
                     AnimateJump();
 
-                    var currentScene = sceneManager.CurrentScene;
+                    Scene currentScene = sceneManager.CurrentScene;
                     foreach (var kvp in currentScene.CharacterLayout)
                     {
                         if (kvp.Value == line.SpeakerId)
@@ -181,6 +183,11 @@ namespace progahell
                         }
                     }
                 }
+                currentDialogueIndex++;
+                isShowingChoices = false;
+
+                ChoicesPanel.Visibility = Visibility.Collapsed;
+                NextButton.Visibility = Visibility.Visible;
             }
             else
             {
@@ -193,18 +200,50 @@ namespace progahell
             Scene scene = sceneManager.CurrentScene;
             if (scene.Choices.Count > 0)
             {
-                ChoisesPanel.ItemsSource = scene.Choices;
-                ChoisesPanel.Visibility = Visibility.Visible;
+                ChoicesPanel.ItemsSource = scene.Choices;
+                ChoicesPanel.Visibility = Visibility.Visible;
+                NextButton.Visibility = Visibility.Collapsed; //убиваем кнопку во время того как выборы показывается
+                isShowingChoices = true;
+                Choices_Back.Visibility = Visibility.Visible; // ща как трайну
+            }
+            else
+            {
+                DialogueTextBlock.Text = "гугу гага я дибил листай уже";
+                NextButton.Visibility = Visibility.Visible;
+                isShowingChoices = false;
             }
 
         }
 
+        //=============================================================================== КЛИКИ
+
         private void Next_Click(object sender, RoutedEventArgs e)
         {
-            ShowNextDialogueLine();
+            if (isShowingChoices)
+            {
+                ShowChoices();
+            }
+            else
+            {
+                ShowNextDialogueLine();
+            }
         }
 
+        private void ChoiceButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (sender is Button btn && btn.Tag is Choice choice)
+            {
+                ChoicesPanel.Visibility = Visibility.Collapsed;
+                Choices_Back.Visibility = Visibility.Collapsed;
+                NextButton.Visibility = Visibility.Visible;
+                isShowingChoices = false;
 
+                scoreCalculator.AddScore(choice.Score);
+                sceneManager.GoTo(choice.NextSceneId);
+            }
+        }
+
+        //=============================================================================== АНИМАЦИИ
         private void AnimateJump()
         {
             var bounceY = new DoubleAnimation(0, -50, TimeSpan.FromMilliseconds(100));
