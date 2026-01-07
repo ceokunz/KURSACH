@@ -9,17 +9,33 @@
         "SpeakerId": "kaz",
         "Text": "а вормикс по руски это короче",
         "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "это кароче ЧЕРВИКС",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "вы дауны?",
+        "Emote": "Sad"
       }
     ],
     "Choices": [
       {
         "Text": "Поплакать",
         "Type": "sad",
-        "Score": 10,
+        "Score": -10,
         "NextSceneId": "zlata_room"
       },
       {
         "Text": "Поставить свечку в церкви",
+        "Type": "normal",
+        "Score": 5,
+        "NextSceneId": "zlata_room"
+      },
+      {
+        "Text": "Пойти писать код",
         "Type": "normal",
         "Score": 20,
         "NextSceneId": "zlata_room"

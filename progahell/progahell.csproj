@@ -11,6 +11,7 @@
   <ItemGroup>
     <None Remove="Res\Background_Polegon.png" />
     <None Remove="Res\K_happy.png" />
+    <None Remove="Res\V_angry.png" />
     <None Remove="Res\V_happy.png" />
     <None Remove="Res\Z_angry.png" />
     <None Remove="Res\Z_happy.png" />
@@ -23,6 +24,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\K_happy.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\V_angry.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\V_happy.png">

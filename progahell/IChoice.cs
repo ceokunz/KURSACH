@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace progahell
 {
-    public interface IChoice
-    {
-        string Text { get; }
-        string Type { get; }
-        int Score { get; }
-    }
+    //public interface IChoice
+    //{
+    //    string Text { get; }
+    //    string Type { get; }
+    //    int Score { get; }
+    //}
 
     public enum EmoteType // типы эмоций спрайтов персонажей
     {
