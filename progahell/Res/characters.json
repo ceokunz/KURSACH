@@ -11,22 +11,62 @@
   },
   {
     "Id": "valera",
-    "Name": "Жирнз",
+    "Name": "Валера",
     "SpritePaths": {
       "Happy": "Res/V_happy.png",
-      "Sad": "Res/Z_sad.png",
+      "Sad": "Res/V_sad.png",
       "Angry": "Res/V_angry.png",
       "Neutral": "Res/Z_neutral.png"
     }
   },
   {
-    "Id": "kaz",
-    "Name": "Казино",
+    "Id": "max",
+    "Name": "Max",
     "SpritePaths": {
-      "Happy": "Res/K_happy.png",
-      "Sad": "Res/Z_sad.png",
-      "Angry": "Res/Z_angry.png",
-      "Neutral": "Res/Z_neutral.png"
+      "Happy": "Res/M_happy.png",
+      "Sad": "Res/M_sad.png",
+      "Angry": "Res/M_angry.png",
+      "Neutral": "Res/M_neutral.png"
+    }
+  },
+  {
+    "Id": "alex",
+    "Name": "Alex",
+    "SpritePaths": {
+      "Happy": "Res/A_happy.png",
+      "Sad": "Res/A_sad.png",
+      "Angry": "Res/A_angry.png",
+      "Neutral": "Res/A_neutral.png"
+    }
+  },
+  {
+    "Id": "ZandV",
+    "Name": "Злата и Валера",
+    "SpritePaths": {
+      "Happy": "Res/ZlataValTogether.png",
+      "Sad": "",
+      "Angry": "",
+      "Neutral": ""
+    }
+  },
+  {
+    "Id": "MandA",
+    "Name": "Max и Alex",
+    "SpritePaths": {
+      "Happy": "Res/MaxAlexTogether.png",
+      "Sad": "",
+      "Angry": "",
+      "Neutral": ""
+    }
+  },
+  {
+    "Id": "storyteller",
+    "Name": "",
+    "SpritePaths": {
+      "Happy": "",
+      "Sad": "",
+      "Angry": "",
+      "Neutral": ""
     }
   }
 ]

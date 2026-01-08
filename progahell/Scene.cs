@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace progahell
         string description;
         string backgroundPath;
         string id;
+        string nextSceneId;
         private Dictionary<CharacterPosition, string> characterLayout = new();
 
 
@@ -31,16 +33,18 @@ namespace progahell
         { get { return backgroundPath; } set { backgroundPath = value; } }
 
         public string Id
-        { get { return id; } set { id= value; } } //попробуй тут везде приваточки влепить
+        { get { return id; } set { id = value; } } //попробуй тут везде приваточки влепить
 
-        public Scene() { }
+        public string NextSceneId
+        { get { return nextSceneId; } set { nextSceneId = value; } }
 
-        public Scene(string id, string title, string description, string backgroundPath)
+        public Scene(string id, string title, string description, string backgroundPath, string nextSceneId)
         {
             Id = id;
             Title = title;
             Description = description;
             BackgroundPath = backgroundPath;
+            NextSceneId = nextSceneId;
             
         }
 

@@ -2,106 +2,179 @@
   {
     "Id": "start",
     "Title": "Начало",
+    "NextSceneId": "start-1",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
       {
-        "SpeakerId": "kaz",
-        "Text": "а вормикс по руски это короче",
-        "Emote": "Happy"
+        "SpeakerId": "storyteller",
+        "Text": "Давным-давно... Где-то в СибГУТИ на 2-ом курсе двое простых ребят пришли на пару ПиОГИ, чтобы получить задание на свой курсач....",
+        "Emote": "Neutral"
       },
+      {
+        "SpeakerId": "ZandV",
+        "Text": "*вламываются в киберпарилку*",
+        "Emote": "Happy"
+      }
+
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "ZandV",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "start-1",
+    "Title": "Начало",
+    "NextSceneId": "start-2",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "max",
+        "Text": "Ну что, вы готовы получить тему своего курсача?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Злата и Валера переглянулись...",
+        "Emote": "Happy"
+      }
+
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "max",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "start-2",
+    "Title": "Начало",
+    "NextSceneId": "start-3",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
       {
         "SpeakerId": "valera",
-        "Text": "это кароче ЧЕРВИКС",
-        "Emote": "Angry"
-      },
-      {
-        "SpeakerId": "kaz",
-        "Text": "ЧЕРВЯТИКС))))",
+        "Text": "Да дава-",
         "Emote": "Happy"
       },
       {
         "SpeakerId": "zlata",
-        "Text": "вы дауны?",
+        "Text": "НЕТ.",
         "Emote": "Sad"
       }
+
     ],
-    "Choices": [
-      {
-        "Text": "Поплакать",
-        "Type": "sad",
-        "Score": -10,
-        "NextSceneId": "zlata_room"
-      },
-      {
-        "Text": "Поставить свечку в церкви",
-        "Type": "normal",
-        "Score": 5,
-        "NextSceneId": "zlata_room"
-      },
-      {
-        "Text": "Пойти писать код",
-        "Type": "normal",
-        "Score": 20,
-        "NextSceneId": "zlata_room"
-      }
-    ],
+    "Choices": [],
     "CharacterLayout": {
       "Left": "zlata",
-      "Center": "kaz",
+      "Center": "",
       "Right": "valera"
     }
   },
   {
-    "Id": "zlata_room",
-    "Title": "Берлога Златы",
-    "Description": "Вы сидите у Златы дома",
-    "BackgroundPath": "Res/Background_Zlata_Room.png",
+    "Id": "start-3",
+    "Title": "Начало",
+    "NextSceneId": "start-4",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
       {
-        "SpeakerId": "valera",
-        "Text": "Итак мы снова здесь рыцарь Златолион... Пора начинать делать ПиРОГИ",
-        "Emote": "Happy"
-      },
-      {
-        "SpeakerId": "zlata",
-        "Text": "А может не надо Валер) Смотри у меня крутой стендап поперечново есть",
+        "SpeakerId": "alex",
+        "Text": "Отлично, вот что мы вам можем предложить...",
         "Emote": "Neutral"
       },
       {
-        "SpeakerId": "valera",
-        "Text": "КОООООД",
-        "Emote": "Angry"
+        "SpeakerId": "max",
+        "Text": "«Разработка базы данных»...",
+        "Emote": "Sad"
       },
       {
-        "SpeakerId": "zlata",
-        "Text": "Не чет не хочу пока",
-        "Emote": "Angry"
+        "SpeakerId": "alex",
+        "Text": "«Оптимизация производительности программы на 0,0001 сек»...",
+        "Emote": "Sad"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "max",
+      "Center": "",
+      "Right": "alex"
+    }
+  },
+  {
+    "Id": "start-4",
+    "Title": "Начало",
+    "NextSceneId": "start-5",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "MandA",
+        "Text": "«Многослойная верификация валидации модуля инициализации конфигурационных параметров среды исполнения»",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "MandA",
+      "Right": ""
+    }
+  },
+
+  {
+    "Id": "ххх",
+    "Title": "ххх",
+    "Description": "ххххххх",
+    "BackgroundPath": "Res/ххх.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "ххх",
+        "Text": "хххххххх",
+        "Emote": "х"
+      },
+      {
+        "SpeakerId": "ххх",
+        "Text": "хххххххх",
+        "Emote": "х"
       }
     ],
     "Choices": [
       {
-        "Text": "Составить план проекта",
-        "Type": "sad",
+        "Text": "хххххх",
+        "Type": "х",
         "Score": 15,
         "NextSceneId": "x"
       },
       {
-        "Text": "Попить чай",
-        "Type": "normal",
-        "Score": -5,
+        "Text": "хххххх",
+        "Type": "х",
+        "Score": 5,
         "NextSceneId": "x"
       },
       {
-        "Text": "Сдендап Поперечного на 5 часов",
-        "Type": "normal",
-        "Score": -20,
+        "Text": "хххххх",
+        "Type": "х",
+        "Score": -10,
+        "NextSceneId": "x"
+      },
+      {
+        "Text": "хххххх",
+        "Type": "х",
+        "Score": 0,
         "NextSceneId": "x"
       }
     ],
     "CharacterLayout": {
-      "Left": "zlata",
-      "Right": "valera"
+      "Left": "ххх",
+      "Center": "ххх",
+      "Right": "ххх"
     }
   }
 ]

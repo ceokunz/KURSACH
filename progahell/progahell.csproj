@@ -12,13 +12,32 @@
     <None Remove="Res\Background_Polegon.png" />
     <None Remove="Res\Background_Zlata_Room.png" />
     <None Remove="Res\choices_back.png" />
-    <None Remove="Res\K_happy.png" />
-    <None Remove="Res\V_angry.png" />
-    <None Remove="Res\V_happy.png" />
+    <None Remove="Res\M_angry.PNG" />
+    <None Remove="Res\M_neutral.PNG" />
+    <None Remove="Res\M_sad.PNG" />
+    <None Remove="Res\V_angry.PNG" />
+    <None Remove="Res\V_happy.PNG" />
+    <None Remove="Res\V_neutral.PNG" />
+    <None Remove="Res\V_sad.PNG" />
     <None Remove="Res\Z_angry.png" />
     <None Remove="Res\Z_happy.png" />
     <None Remove="Res\Z_neutral.png" />
     <None Remove="Res\Z_sad.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Res\M_angry.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\M_neutral.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\M_sad.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\V_sad.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
   <ItemGroup>
@@ -29,13 +48,13 @@
     <Resource Include="Res\choices_back.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Res\K_happy.png">
+    <Resource Include="Res\V_angry.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Res\V_angry.png">
+    <Resource Include="Res\V_happy.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Res\V_happy.png">
+    <Resource Include="Res\V_neutral.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\Z_angry.png">

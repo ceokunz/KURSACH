@@ -54,7 +54,7 @@ namespace progahell
 
             foreach (var s in sceneList)
             {
-                var scene = new Scene(s.Id, s.Title, s.Description, s.BackgroundPath);
+                Scene scene = new Scene(s.Id, s.Title, s.Description, s.BackgroundPath, s.NextSceneId);
 
                 scene.Dialogue = s.Dialogue ?? new List<DialogueLine>();
 
@@ -208,7 +208,7 @@ namespace progahell
             }
             else
             {
-                DialogueTextBlock.Text = "гугу гага я дибил листай уже";
+                sceneManager.GoTo(scene.NextSceneId);
                 NextButton.Visibility = Visibility.Visible;
                 isShowingChoices = false;
             }
@@ -283,6 +283,7 @@ namespace progahell
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
         public string BackgroundPath { get; set; } = "";
+        public string NextSceneId { get; set; } = "";
         public List<Choice> Choices { get; set; } = new();
         public List<DialogueLine> Dialogue { get; set; } = new();
         public Dictionary<string, string> CharacterLayout { get; set; } = new();
