@@ -268,8 +268,8 @@ namespace progahell
             targetImage.RenderTransform = translateTransform;
             targetImage.RenderTransformOrigin = new Point(0.5, 1.0); // лучше прыгать от низа
 
-            var bounceY = new DoubleAnimation(0, -50, TimeSpan.FromMilliseconds(100));
-            var fallY = new DoubleAnimation(-50, 0, TimeSpan.FromMilliseconds(100));
+            var bounceY = new DoubleAnimation(0, -20, TimeSpan.FromMilliseconds(100));
+            var fallY = new DoubleAnimation(-20, 0, TimeSpan.FromMilliseconds(100));
 
             bounceY.Completed += (s, e) =>
             {

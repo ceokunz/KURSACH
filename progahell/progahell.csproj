@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Elements\dialogue_window.png" />
+    <None Remove="Elements\next_button.png" />
     <None Remove="Res\A_angry.PNG" />
     <None Remove="Res\A_neutral.PNG" />
     <None Remove="Res\A_sad.PNG" />
@@ -31,6 +33,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Elements\dialogue_window.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Elements\next_button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Res\A_angry.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

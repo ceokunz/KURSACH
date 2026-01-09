@@ -2,7 +2,7 @@
   {
     "Id": "start",
     "Title": "Начало",
-    "NextSceneId": "start-1",
+    "NextSceneId": "start-0",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
@@ -10,7 +10,22 @@
         "SpeakerId": "storyteller",
         "Text": "Давным-давно... Где-то в СибГУТИ на 2-ом курсе двое простых ребят пришли на пару ПиОГИ, чтобы получить задание на свой курсач....",
         "Emote": "Neutral"
-      },
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "start-0",
+    "Title": "Начало",
+    "NextSceneId": "start-1",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
       {
         "SpeakerId": "ZandV",
         "Text": "*вламываются в киберпарилку*",
@@ -124,6 +139,166 @@
     "CharacterLayout": {
       "Left": "",
       "Center": "MandA",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "start-5",
+    "Title": "Начало",
+    "NextSceneId": "start-6",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "ZandV",
+        "Text": "ПОЖАЛУЙСТА ХВАТИТ!!!",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "ZandV",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "start-6",
+    "Title": "Начало",
+    "NextSceneId": "start-7",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "max",
+        "Text": "Нууу ок... Но что вы тогда будете делать?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Отчисляться...",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Попридержи коней, бравая воительница...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Мы разработаем визуальную новеллу!!!",
+        "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Валер, мы умрем)))",
+        "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Да норм))))))",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "zlata",
+      "Center": "max",
+      "Right": "valera"
+    }
+  },
+  {
+    "Id": "start-7",
+    "Title": "Начало",
+    "NextSceneId": "start-8",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "alex",
+        "Text": "Ну, хорошо. Делайте.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "alex",
+        "Text": "Будем с нетерпением ждать результатов...",
+        "Emote": "sad"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "zlata",
+      "Center": "alex",
+      "Right": "valera"
+    }
+  },
+  {
+    "Id": "start-8",
+    "Title": "Начало",
+    "NextSceneId": "start-9",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "MandA",
+        "Text": "Счастливых вам голодных игр!",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "MandA",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "start-9",
+    "Title": "Начало",
+    "NextSceneId": "xxx",
+    "Description": "Вы получаете задание на курсач",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "И так началось их приключение...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "До сдачи курсача остался месяц.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [
+      {
+        "Text": "Сразу отправиться работать над курсачем",
+        "Type": "x",
+        "Score": 15,
+        "NextSceneId": "xxx"
+      },
+      {
+        "Text": "Сначала пожрать в Додо",
+        "Type": "x",
+        "Score": 5,
+        "NextSceneId": "xxx"
+      },
+      {
+        "Text": "Сначала заняться долгами",
+        "Type": "x",
+        "Score": -15,
+        "NextSceneId": "xxx"
+      },
+      {
+        "Text": "Отложить курсач до лучших времен",
+        "Type": "x",
+        "Score": 0,
+        "NextSceneId": "xxx"
+      }
+    ],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
       "Right": ""
     }
   },

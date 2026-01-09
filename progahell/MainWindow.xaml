@@ -47,14 +47,14 @@
 
 
             <Grid Grid.Row="1" Panel.ZIndex="1">
-                <Border Background="AliceBlue" Margin="10">
+                <Border Background="AliceBlue" Margin="30">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <TextBlock x:Name="SpeakerNameBlock" Grid.Row="0" Text="" Height="60" FontSize="40"></TextBlock>
+                        <TextBlock x:Name="SpeakerNameBlock" Grid.Row="0" Text="" Height="80" FontSize="60"></TextBlock>
                         <TextBlock x:Name="DialogueTextBlock" Grid.Row="1" FontSize="30"></TextBlock>
                         <Grid Grid.Row="2" Height="60" VerticalAlignment="Bottom">
                             <Grid.ColumnDefinitions>
