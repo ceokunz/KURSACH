@@ -9,9 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Res\A_angry.PNG" />
+    <None Remove="Res\A_neutral.PNG" />
+    <None Remove="Res\A_sad.PNG" />
     <None Remove="Res\Background_Polegon.png" />
     <None Remove="Res\Background_Zlata_Room.png" />
     <None Remove="Res\choices_back.png" />
+    <None Remove="Res\MaxAlexTogether.png" />
     <None Remove="Res\M_angry.PNG" />
     <None Remove="Res\M_neutral.PNG" />
     <None Remove="Res\M_sad.PNG" />
@@ -19,6 +23,7 @@
     <None Remove="Res\V_happy.PNG" />
     <None Remove="Res\V_neutral.PNG" />
     <None Remove="Res\V_sad.PNG" />
+    <None Remove="Res\ZlataValTogether.png" />
     <None Remove="Res\Z_angry.PNG" />
     <None Remove="Res\Z_happy.PNG" />
     <None Remove="Res\Z_neutral.PNG" />
@@ -26,6 +31,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Res\A_angry.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\A_neutral.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\A_sad.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\MaxAlexTogether.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Res\M_angry.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -55,6 +72,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\V_neutral.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\ZlataValTogether.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\Z_angry.PNG">

@@ -44,9 +44,9 @@
     "Name": "Злата и Валера",
     "SpritePaths": {
       "Happy": "Res/ZlataValTogether.png",
-      "Sad": "",
-      "Angry": "",
-      "Neutral": ""
+      "Sad": "Res/ZlataValTogether.png",
+      "Angry": "Res/ZlataValTogether.png",
+      "Neutral": "Res/ZlataValTogether.png"
     }
   },
   {
@@ -54,9 +54,9 @@
     "Name": "Max и Alex",
     "SpritePaths": {
       "Happy": "Res/MaxAlexTogether.png",
-      "Sad": "",
-      "Angry": "",
-      "Neutral": ""
+      "Sad": "Res/MaxAlexTogether.png",
+      "Angry": "Res/MaxAlexTogether.png",
+      "Neutral": "Res/MaxAlexTogether.png"
     }
   },
   {
