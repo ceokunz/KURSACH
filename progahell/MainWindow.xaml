@@ -58,7 +58,7 @@
                             </Grid.RowDefinitions>
                             
                             <TextBlock x:Name="SpeakerNameBlock"
-                           Text="Златотуй"
+                           Text=""
                            FontSize="50"
                            FontWeight="Bold"
                            Foreground="White"
@@ -75,7 +75,7 @@
                            Margin="0,30,0,0"/>
 
                             <Grid Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                                <Button x:Name="NextButton" Width="250" Height="90"
+                                <Button x:Name="NextButton" Width="200" Height="90"
                             Content="NEXT"
                             Click="Next_Click"
                             Visibility="Visible"
