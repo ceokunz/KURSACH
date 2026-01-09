@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:progahell"
         mc:Ignorable="d"
-        Title="ProgaHELL" Height="1800" Width="3200">
+        Title="ProgaHELL" Height="900" Width="1600">
     
     <Grid>
         <Grid x:Name="MainGrid">
@@ -46,27 +46,45 @@
                 <Image Source="Res/choices_back.png" Stretch="Fill"></Image>
             </Grid>
 
-
             <Grid Grid.Row="1" Panel.ZIndex="1">
                 <Border Style="{StaticResource DialogueWindowBorderStyle}">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="0.7*"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock x:Name="SpeakerNameBlock" Grid.Row="0" Text="" Height="100" FontSize="50" Margin="20,80,2000,0" TextAlignment="Center" FontWeight="Bold" Foreground="White"></TextBlock>
-                        <TextBlock x:Name="DialogueTextBlock" Grid.Row="1" FontSize="40" Margin="100,20,60,0" ></TextBlock>
-                        <Grid Grid.Row="2" Height="100" VerticalAlignment="Bottom" Margin="0,10,0,70">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Button x:Name="NextButton" Grid.Column="4" Content="NEXT" Click="Next_Click" Visibility="Visible" Style="{StaticResource NextButtonStyle}"></Button>
+                        <Grid Margin="40">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.8*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            
+                            <TextBlock x:Name="SpeakerNameBlock"
+                           Text="Златотуй"
+                           FontSize="50"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Bottom"
+                           Margin="0,0,0,10"/>
+    
+                            <TextBlock x:Name="DialogueTextBlock"
+                           Grid.Row="1"
+                           FontSize="40"
+                           TextWrapping="Wrap"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"
+                           Margin="0,30,0,0"/>
+
+                            <Grid Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                                <Button x:Name="NextButton" Width="250" Height="90"
+                            Content="NEXT"
+                            Click="Next_Click"
+                            Visibility="Visible"
+                            Style="{StaticResource NextButtonStyle}"
+                            Padding="24,12"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Bottom"/>
+                            </Grid>
+
                         </Grid>
                     </Grid>
                 </Border>
