@@ -171,16 +171,22 @@ namespace progahell
                 {
                     // временный эмоут
                     speaker.SetEmote(line.EmoteEnum);
-                    AnimateJump();
 
                     Scene currentScene = sceneManager.CurrentScene;
-                    foreach (var kvp in currentScene.CharacterLayout)
+
+                    CharacterPosition? speakerPosition = null;
+                    foreach (var layoutEntry in currentScene.CharacterLayout)
                     {
-                        if (kvp.Value == line.SpeakerId)
+                        if (layoutEntry.Value == line.SpeakerId)
                         {
-                            SetCharacterSprite(kvp.Key, speaker.CurrentSpritePath);
+                            speakerPosition = layoutEntry.Key;
                             break;
                         }
+                    }
+                    if (speakerPosition.HasValue)
+                    {
+                        SetCharacterSprite(speakerPosition.Value, speaker.CurrentSpritePath);
+                        AnimateJump(speakerPosition.Value);
                     }
                 }
                 currentDialogueIndex++;
@@ -244,23 +250,26 @@ namespace progahell
         }
 
         //=============================================================================== АНИМАЦИИ
-        private void AnimateJump()
+        private void AnimateJump(CharacterPosition position)
         {
+            // Выбираем нужный Image
+            Image targetImage = position switch
+            {
+                CharacterPosition.Left => LeftPos,
+                CharacterPosition.Center => CenterPos,
+                CharacterPosition.Right => RightPos,
+                _ => null
+            };
+
+            if (targetImage == null) return;
+
+            // Создаём свою трансформацию для этого изображения
+            var translateTransform = new TranslateTransform();
+            targetImage.RenderTransform = translateTransform;
+            targetImage.RenderTransformOrigin = new Point(0.5, 1.0); // лучше прыгать от низа
+
             var bounceY = new DoubleAnimation(0, -50, TimeSpan.FromMilliseconds(100));
             var fallY = new DoubleAnimation(-50, 0, TimeSpan.FromMilliseconds(100));
-
-            var transformGroup = new TransformGroup();
-            var translateTransform = new TranslateTransform();
-            transformGroup.Children.Add(translateTransform);
-
-            LeftPos.RenderTransformOrigin = new Point(0.5, 0.5);
-            LeftPos.RenderTransform = transformGroup;
-
-            CenterPos.RenderTransformOrigin = new Point(0.5, 0.5);
-            CenterPos.RenderTransform = transformGroup;
-
-            RightPos.RenderTransformOrigin = new Point(0.5, 0.5);
-            RightPos.RenderTransform = transformGroup;
 
             bounceY.Completed += (s, e) =>
             {

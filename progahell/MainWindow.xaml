@@ -13,7 +13,7 @@
                 <RowDefinition Height="0.55*"/>
             </Grid.RowDefinitions>
 
-            <Grid Margin="0,0,0,-300">
+            <Grid Margin="0,0,0,-100">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition/>
                     <ColumnDefinition/>
@@ -24,7 +24,7 @@
                 <Image Grid.Column="2" x:Name="RightPos"></Image>
             </Grid>
 
-            <Grid x:Name="Choices" Margin="0,0,0,-300" Panel.ZIndex="3">
+            <Grid x:Name="Choices" Margin="0,0,0,-400" Panel.ZIndex="3">
                 <ItemsControl x:Name="ChoicesPanel" Visibility="Collapsed">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
