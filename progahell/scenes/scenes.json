@@ -49,6 +49,11 @@
     "Dialogue": [
       {
         "SpeakerId": "max",
+        "Text": "А вот и наши подопытные кролики...",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "max",
         "Text": "Ну что, вы готовы получить тему своего курсача?",
         "Emote": "Neutral"
       },
@@ -101,7 +106,12 @@
     "Dialogue": [
       {
         "SpeakerId": "alex",
-        "Text": "Отлично, вот что мы вам можем предложить...",
+        "Text": "Да-да, отлично!",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "alex",
+        "Text": "Вот что мы вам можем предложить...",
         "Emote": "Neutral"
       },
       {
@@ -255,7 +265,7 @@
   {
     "Id": "start-9",
     "Title": "Начало",
-    "NextSceneId": "xxx",
+    "NextSceneId": "u_zlaty",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
@@ -275,25 +285,25 @@
         "Text": "Сразу отправиться работать над курсачем",
         "Type": "x",
         "Score": 15,
-        "NextSceneId": "xxx"
+        "NextSceneId": "u_zlaty"
       },
       {
         "Text": "Сначала пожрать в Додо",
         "Type": "x",
         "Score": 5,
-        "NextSceneId": "xxx"
+        "NextSceneId": "u_zlaty"
       },
       {
         "Text": "Сначала заняться долгами",
         "Type": "x",
         "Score": -15,
-        "NextSceneId": "xxx"
+        "NextSceneId": "u_zlaty"
       },
       {
         "Text": "Отложить курсач до лучших времен",
         "Type": "x",
         "Score": 0,
-        "NextSceneId": "xxx"
+        "NextSceneId": "u_zlaty"
       }
     ],
     "CharacterLayout": {
@@ -303,53 +313,161 @@
     }
   },
 
+
+
   {
-    "Id": "ххх",
-    "Title": "ххх",
-    "Description": "ххххххх",
-    "BackgroundPath": "Res/ххх.png",
+    "Id": "u_zlaty",
+    "Title": "У Златы",
+    "NextSceneId": "u_zlaty-1",
+    "Description": "Валера и Злата пришли к ней в гости и пытаются обсудить курсач",
+    "BackgroundPath": "Res/Background_Zlata_Room.png",
     "Dialogue": [
       {
-        "SpeakerId": "ххх",
-        "Text": "хххххххх",
-        "Emote": "х"
+        "SpeakerId": "storyteller",
+        "Text": "Итак, Злата и Валера вместе прибыли к ней в дом и решили начать обсуждение их курсача...",
+        "Emote": "Neutral"
       },
       {
-        "SpeakerId": "ххх",
-        "Text": "хххххххх",
-        "Emote": "х"
+        "SpeakerId": "storyteller",
+        "Text": "Валера властно расселся на кресле, глядя на Злату.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "u_zlaty-1",
+    "Title": "У Златы",
+    "NextSceneId": "u_zlaty-2",
+    "Description": "Валера и Злата пришли к ней в гости и пытаются обсудить курсач",
+    "BackgroundPath": "Res/Background_Zlata_Room.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "valera",
+        "Text": "Ну, что ж, пора начинать... Наверное, нам нужен план действий.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Что думаешь?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Я думаю, нам стоит поесть бутербродов с сыром.",
+        "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Мне пожалуйста с двойным сыром",
+        "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "ДА ПОБЫСТРЕЕ",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Ок...",
+        "Emote": "Angry"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "zlata",
+      "Center": "",
+      "Right": "valera"
+    }
+  },
+  {
+    "Id": "u_zlaty-2",
+    "Title": "У Златы",
+    "NextSceneId": "u_zlaty-3",
+    "Description": "Валера и Злата пришли к ней в гости и пытаются обсудить курсач",
+    "BackgroundPath": "Res/Background_Zlata_Room.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Спустя 10 минут Злата вернулась с сочнейшими бутербродами и чаем...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "И в бутерброды Валеры никто точно не положил помидоры...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Черт, да Валера ненавидит помидоры.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "u_zlaty-3",
+    "Title": "У Златы",
+    "NextSceneId": "xxx",
+    "Description": "Валера и Злата пришли к ней в гости и пытаются обсудить курсач",
+    "BackgroundPath": "Res/Background_Zlata_Room.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "valera",
+        "Text": "Класс.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Теперь можно начинать.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Ага......",
+        "Emote": "Sad"
       }
     ],
     "Choices": [
       {
-        "Text": "хххххх",
-        "Type": "х",
+        "Text": "Приступить к составлению плана",
+        "Type": "x",
         "Score": 15,
-        "NextSceneId": "x"
+        "NextSceneId": "start"
       },
       {
-        "Text": "хххххх",
-        "Type": "х",
+        "Text": "Сначала бутеры, потом план",
+        "Type": "x",
         "Score": 5,
-        "NextSceneId": "x"
+        "NextSceneId": "start"
       },
       {
-        "Text": "хххххх",
-        "Type": "х",
-        "Score": -10,
-        "NextSceneId": "x"
+        "Text": "Стендап Поперечного сам себя не посмотрит",
+        "Type": "x",
+        "Score": -15,
+        "NextSceneId": "start"
       },
       {
-        "Text": "хххххх",
-        "Type": "х",
+        "Text": "Да и без плана справимся",
+        "Type": "x",
         "Score": 0,
-        "NextSceneId": "x"
+        "NextSceneId": "start"
       }
     ],
     "CharacterLayout": {
-      "Left": "ххх",
-      "Center": "ххх",
-      "Right": "ххх"
+      "Left": "zlata",
+      "Center": "",
+      "Right": "valera"
     }
   }
 ]

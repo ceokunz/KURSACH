@@ -67,12 +67,13 @@
                            Margin="0,0,0,10"/>
     
                             <TextBlock x:Name="DialogueTextBlock"
+                                       Text="fdsfjnsf"
                            Grid.Row="1"
                            FontSize="40"
                            TextWrapping="Wrap"
                            HorizontalAlignment="Left"
                            VerticalAlignment="Top"
-                           Margin="0,30,0,0"/>
+                           Margin="50,30,0,0"/>
 
                             <Grid Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                                 <Button x:Name="NextButton" Width="200" Height="90"

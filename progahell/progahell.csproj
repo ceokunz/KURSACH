@@ -57,6 +57,9 @@
     <Resource Include="Elements\choice_button.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Res\Background_Zlata_Room.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Res\MaxAlexTogether.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -78,7 +81,6 @@
     <Resource Include="Res\.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Res\Background_Zlata_Room.png" />
     <Resource Include="Res\choices_back.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

@@ -94,9 +94,19 @@ namespace progahell
             }
 
             // сброс спрайтов
+            foreach (var charId in scene.CharacterLayout.Values)
+            {
+                var character = characterManager.GetCharacter(charId);
+                if (character != null)
+                {
+                    character.SetEmote(EmoteType.Neutral); // ← сброс к нейтральной
+                }
+            }
+
+            // Сбрасываем спрайты (скрываем)
             ClearCharacterPositions();
 
-            // показываем чаров из лейаута
+            // Показываем персонажей с НЕЙТРАЛЬНОЙ эмоцией
             foreach (var layout in scene.CharacterLayout)
             {
                 var position = layout.Key;
