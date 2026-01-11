@@ -55,6 +55,7 @@
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="Auto"/>
+                                <!--<RowDefinition Height="1*"/>-->
                             </Grid.RowDefinitions>
                             
                             <TextBlock x:Name="SpeakerNameBlock"
@@ -84,6 +85,8 @@
                             HorizontalAlignment="Right"
                             VerticalAlignment="Bottom"/>
                             </Grid>
+
+                            <!--<TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>-->
 
                         </Grid>
                     </Grid>

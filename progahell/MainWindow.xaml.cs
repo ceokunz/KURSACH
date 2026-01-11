@@ -18,7 +18,7 @@ namespace progahell
     {
         private SceneManager sceneManager = new();
         private CharacterManager characterManager = new();
-        private ScoreCalculator scoreCalculator = new();
+        public ScoreCalculator ScoreCalculator { get; } = new();
 
         private List<DialogueLine> currentDialogue = new();
         private int currentDialogueIndex = 0;
@@ -254,7 +254,7 @@ namespace progahell
                 NextButton.Visibility = Visibility.Visible;
                 isShowingChoices = false;
 
-                scoreCalculator.AddScore(choice.Score);
+                ScoreCalculator.AddScore(choice.Score);
                 sceneManager.GoTo(choice.NextSceneId);
             }
         }
