@@ -98,7 +98,7 @@ namespace progahell
             // Кнопка "клик"
             clickButton = new Button
             {
-                Content = "🔥 КЛИКНИ, ЧТОБЫ ДВИНУТЬСЯ ВПЕРЁД! 🔥",
+                Content = "КЛИКНИ, ЧТОБЫ ДВИНУТЬСЯ ВПЕРЁД!",
                 FontSize = 16,
                 Margin = new Thickness(20),
                 Background = Brushes.DarkRed,

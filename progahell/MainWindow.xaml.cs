@@ -31,7 +31,8 @@ namespace progahell
             LoadGameData(); //загрузка файлов игры
 
             sceneManager.SceneChanged += OnSceneChanged;
-            sceneManager.Start("start");
+            
+            StartTitleAnimation();
         }
 
         private void LoadGameData()
@@ -67,7 +68,20 @@ namespace progahell
                 sceneManager.AddScene(scene);
             }
         }
+        private void StartTitleAnimation()
+        {
+            var animation = new DoubleAnimation
+            {
+                From = -10,
+                To = 10,
+                Duration = TimeSpan.FromSeconds(2),
+                AutoReverse = true,
+                RepeatBehavior = RepeatBehavior.Forever,
+                EasingFunction = new SineEase { EasingMode = EasingMode.EaseInOut }
+            };
 
+            TitleTransform.BeginAnimation(TranslateTransform.YProperty, animation);
+        }
         private void OnSceneChanged(Scene scene)
         {
             if (!string.IsNullOrWhiteSpace(scene.BackgroundPath))
@@ -294,7 +308,14 @@ namespace progahell
             };
             timer.Start();
         }
+        private void StartGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Скрываем стартовое меню
+            StartOverlay.Visibility = Visibility.Collapsed;
 
+            // Запускаем игру с первой сцены
+            sceneManager.Start("start");
+        }
         private void RestartGame()
         {
             ScoreCalculator = new ScoreCalculator();
@@ -349,6 +370,7 @@ namespace progahell
                     sceneManager.GoTo(choice.NextSceneId);
                 }
             }
+
         }
         
 
