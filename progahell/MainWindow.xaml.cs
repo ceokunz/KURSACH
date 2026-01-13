@@ -224,9 +224,14 @@ namespace progahell
             }
             else
             {
-                sceneManager.GoTo(scene.NextSceneId);
-                NextButton.Visibility = Visibility.Visible;
-                isShowingChoices = false;
+                if (!string.IsNullOrEmpty(scene.NextSceneId))
+                {
+                    sceneManager.GoTo(scene.NextSceneId);
+                }
+                else
+                {
+                    ShowEnding();
+                }
             }
 
         }
