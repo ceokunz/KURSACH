@@ -8,8 +8,8 @@ namespace progahell
         private static readonly Dictionary<string, Func<IMiniGame>> gameRegistry =
             new Dictionary<string, Func<IMiniGame>>(StringComparer.OrdinalIgnoreCase)
             {
-                { "clicker", () => new ClickerMiniGame() }
-                // Сюда можно добавлять: { "memory", () => new MemoryGame() }, и т.д.
+                { "clicker", () => new ClickerMiniGame() },
+                { "puzzle", () => new PuzzleMiniGame() }
             };
 
         public static IMiniGame CreateGame(string gameType)

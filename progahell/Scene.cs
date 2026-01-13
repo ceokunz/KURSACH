@@ -20,6 +20,7 @@ namespace progahell
         public List<Choice> Choices { get; } = new List<Choice>();
         public List<DialogueLine> Dialogue { get; set; }
 
+
         public Dictionary<CharacterPosition, string> CharacterLayout => characterLayout;
 
         public string Title
