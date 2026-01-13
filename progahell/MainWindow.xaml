@@ -9,7 +9,7 @@
     
     <Grid>
         <Grid x:Name="EndingOverlay" Visibility="Collapsed" Panel.ZIndex="100" Background="AliceBlue">
-            <Image x:Name="EndingBackground" Stretch="UniformToFill"/>
+            <Image x:Name="EndingBackground" Stretch="UniformToFill" Source="Elements/Background_Credits.png"/>
 
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
                 <TextBlock x:Name="EndingTitle" FontSize="48" Foreground="White" TextAlignment="Center" Margin="0,0,0,20"/>
@@ -99,7 +99,7 @@
                             VerticalAlignment="Bottom"/>
                             </Grid>
 
-                            <TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>
+                            <!--<TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>-->
 
                         </Grid>
                     </Grid>

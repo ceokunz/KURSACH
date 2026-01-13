@@ -22,7 +22,7 @@
   {
     "Id": "start-0",
     "Title": "Начало",
-    "NextSceneId": "start-1",
+    "NextSceneId": "go_to_ending",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [

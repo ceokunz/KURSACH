@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Elements\Background_Credits.png" />
     <None Remove="Elements\dialogue_window.png" />
     <None Remove="Elements\next_button.png" />
     <None Remove="Res\.png" />
@@ -36,6 +37,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Elements\Background_Credits.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Elements\dialogue_window.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
