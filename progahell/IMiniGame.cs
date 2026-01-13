@@ -8,7 +8,8 @@ namespace progahell
 {
     public interface IMiniGame
     {
-        string Name { get; }
+        string Name { get; }          // Отображаемое имя ("Бегство из Ада")
+        string GameType { get; }      // Технический ID ("clicker")
         int MaxScore { get; }
         int PlayerScore { get; }
 
