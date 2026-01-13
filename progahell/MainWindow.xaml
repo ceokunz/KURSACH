@@ -8,19 +8,22 @@
         Title="ProgaHELL" Height="900" Width="1600">
     
     <Grid>
-        <Grid x:Name="EndingOverlay" Visibility="Collapsed" Panel.ZIndex="100" Background="AliceBlue">
+        <Grid x:Name="StartOverlay" Visibility="Collapsed" Panel.ZIndex="100">
+            <Image x:Name="StartBackground" Stretch="UniformToFill" Source="Elements/xxx.png"/>
+            <Button x:Name="StartGameButton" Content="НАЧАТЬ ИГРУ" 
+            HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+            Margin="0,0,0,50" Padding="20,10" FontSize="20"
+            Click="tartGameButton_Click" Visibility="Collapsed"/>
+        </Grid>
+
+        <Grid x:Name="EndingOverlay" Visibility="Collapsed" Panel.ZIndex="100">
             <Image x:Name="EndingBackground" Stretch="UniformToFill" Source="Elements/Background_Credits.png"/>
-
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-                <TextBlock x:Name="EndingTitle" FontSize="48" Foreground="White" TextAlignment="Center" Margin="0,0,0,20"/>
-                <TextBlock x:Name="EndingText" FontSize="24" Foreground="White" TextAlignment="Center" MaxWidth="600" TextWrapping="Wrap"/>
-            </StackPanel>
-
             <Button x:Name="BackToMenuButton" Content="В МЕНЮ" 
             HorizontalAlignment="Center" VerticalAlignment="Bottom" 
             Margin="0,0,0,50" Padding="20,10" FontSize="20"
             Click="BackToMenuButton_Click" Visibility="Collapsed"/>
         </Grid>
+        
         <Grid x:Name="MainGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
