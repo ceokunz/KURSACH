@@ -9,14 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Elements\Background_Credits.png" />
     <None Remove="Elements\dialogue_window.png" />
     <None Remove="Elements\next_button.png" />
+    <None Remove="Res\.png" />
     <None Remove="Res\A_angry.PNG" />
     <None Remove="Res\A_neutral.PNG" />
     <None Remove="Res\A_sad.PNG" />
     <None Remove="Res\Background_Polegon.png" />
     <None Remove="Res\Background_Zlata_Room.png" />
     <None Remove="Res\choices_back.png" />
+    <None Remove="Res\choice_button.png" />
     <None Remove="Res\MaxAlexTogether.png" />
     <None Remove="Res\M_angry.PNG" />
     <None Remove="Res\M_neutral.PNG" />
@@ -30,9 +33,13 @@
     <None Remove="Res\Z_happy.PNG" />
     <None Remove="Res\Z_neutral.PNG" />
     <None Remove="Res\Z_sad.PNG" />
+    <None Remove="Res\кунзик.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Elements\Background_Credits.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Elements\dialogue_window.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -46,6 +53,15 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\A_sad.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Polegon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Elements\choice_button.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Zlata_Room.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\MaxAlexTogether.png">
@@ -66,10 +82,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Res\Background_Polegon.png">
+    <Resource Include="Res\.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Res\Background_Zlata_Room.png" />
     <Resource Include="Res\choices_back.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -95,6 +110,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\Z_sad.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\кунзик.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>

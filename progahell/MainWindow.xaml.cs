@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
 namespace progahell
 {
@@ -18,7 +19,7 @@ namespace progahell
     {
         private SceneManager sceneManager = new();
         private CharacterManager characterManager = new();
-        private ScoreCalculator scoreCalculator = new();
+        public ScoreCalculator ScoreCalculator { get; set; } = new();
 
         private List<DialogueLine> currentDialogue = new();
         private int currentDialogueIndex = 0;
@@ -95,9 +96,19 @@ namespace progahell
             }
 
             // сброс спрайтов
+            foreach (var charId in scene.CharacterLayout.Values)
+            {
+                var character = characterManager.GetCharacter(charId);
+                if (character != null)
+                {
+                    character.SetEmote(EmoteType.Neutral); // ← сброс к нейтральной
+                }
+            }
+
+            // Сбрасываем спрайты (скрываем)
             ClearCharacterPositions();
 
-            // показываем чаров из лейаута
+            // Показываем персонажей с НЕЙТРАЛЬНОЙ эмоцией
             foreach (var layout in scene.CharacterLayout)
             {
                 var position = layout.Key;
@@ -207,13 +218,11 @@ namespace progahell
         {
             Scene currentScene = sceneManager.CurrentScene;
 
-            // Скрываем UI элементы
             NextButton.Visibility = Visibility.Collapsed;
             ChoicesPanel.Visibility = Visibility.Collapsed;
             Choices_Back.Visibility = Visibility.Collapsed;
             isShowingChoices = false;
 
-            // Проверяем: есть ли мини-игра?
             if (currentScene.MiniGameType != "none")
             {
                 try
@@ -232,12 +241,10 @@ namespace progahell
                 }
                 catch (Exception ex)
                 {
-                    // На случай ошибки — логируем и идём дальше
                     System.Diagnostics.Debug.WriteLine($"Ошибка запуска мини-игры: {ex.Message}");
                 }
             }
 
-            // Если нет мини-игры — проверяем выборы
             if (currentScene.Choices.Count > 0)
             {
                 ChoicesPanel.ItemsSource = currentScene.Choices;
@@ -247,9 +254,55 @@ namespace progahell
             }
             else
             {
-                // Ни мини-игры, ни выборов — просто идём дальше
-                sceneManager.GoTo(currentScene.NextSceneId);
+                if (scene.NextSceneId == "go_to_ending")
+                {
+                    ShowEnding();
+                }
+                else if (scene.NextSceneId == "show_credits_overlay")
+                {
+                    ShowCreditsOverlay();
+                }
+                else if (!string.IsNullOrEmpty(scene.NextSceneId))
+                {
+                    sceneManager.GoTo(scene.NextSceneId);
+                }
             }
+        }
+
+        private void ShowEnding()
+        {
+            var endingType = new EndingCalculator().CalculateEnding(ScoreCalculator);
+            string endingSceneId = endingType switch
+            {
+                EndingType.Perfect => "best",
+                EndingType.Good => "good",
+                EndingType.Bad => "bad",
+                EndingType.Secret => "secret"
+            };
+            sceneManager.GoTo(endingSceneId);
+        }
+
+        private void ShowCreditsOverlay()
+        {
+            EndingOverlay.Visibility = Visibility.Visible;
+
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) }; //ну это же мега эпик? я дэб сорри
+            timer.Tick += (s, e) =>
+            {
+                timer.Stop();
+                BackToMenuButton.Visibility = Visibility.Visible;
+            };
+            timer.Start();
+        }
+
+        private void RestartGame()
+        {
+            ScoreCalculator = new ScoreCalculator();
+            currentDialogue.Clear();
+            currentDialogueIndex = 0;
+            isShowingChoices = false;
+
+            sceneManager.Start("start");
         }
 
         //=============================================================================== КЛИКИ
@@ -298,6 +351,14 @@ namespace progahell
             }
         }
         
+
+        private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            EndingOverlay.Visibility = Visibility.Collapsed;
+            BackToMenuButton.Visibility = Visibility.Collapsed;
+
+            RestartGame();
+        }
 
         //=============================================================================== АНИМАЦИИ
         private void AnimateJump(CharacterPosition position)
