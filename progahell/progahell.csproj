@@ -16,6 +16,8 @@
     <None Remove="Res\A_angry.PNG" />
     <None Remove="Res\A_neutral.PNG" />
     <None Remove="Res\A_sad.PNG" />
+    <None Remove="Res\Background_Discord.png" />
+    <None Remove="Res\Background_Lecture.png" />
     <None Remove="Res\Background_Polegon.png" />
     <None Remove="Res\Background_Zlata_Room.png" />
     <None Remove="Res\choices_back.png" />
@@ -55,10 +57,16 @@
     <Resource Include="Res\A_sad.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Res\Background_Polegon.png">
+    <Resource Include="Elements\choice_button.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Elements\choice_button.png">
+    <Resource Include="Res\Background_Discord.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Lecture.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Polegon.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\Background_Zlata_Room.png">
