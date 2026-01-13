@@ -3,6 +3,7 @@
     "Id": "start",
     "Title": "Начало",
     "NextSceneId": "start-0",
+    "MiniGameType":"puzzle",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [

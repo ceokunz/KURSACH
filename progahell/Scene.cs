@@ -16,10 +16,10 @@ namespace progahell
         string id;
         string nextSceneId;
         private Dictionary<CharacterPosition, string> characterLayout = new();
-
-
+        public string MiniGameType { get; private set; } = "none"; // по умолчанию
         public List<Choice> Choices { get; } = new List<Choice>();
         public List<DialogueLine> Dialogue { get; set; }
+
 
         public Dictionary<CharacterPosition, string> CharacterLayout => characterLayout;
 
@@ -47,7 +47,10 @@ namespace progahell
             NextSceneId = nextSceneId;
             
         }
-
+        public void SetMiniGameType(string type)
+        {
+            MiniGameType = type ?? "none";
+        }
         public void SetCharacter(CharacterPosition position, string characterId)
         {
             CharacterLayout[position] = characterId; // ломай ломай код мы же миллионеры 

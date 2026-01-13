@@ -63,6 +63,7 @@ namespace progahell
                 scene.Choices.AddRange(s.Choices ?? new List<Choice>());
 
                 scene.InitializeLayoutFromJson(s.CharacterLayout);
+                scene.SetMiniGameType(s.MiniGameType);
                 sceneManager.AddScene(scene);
             }
         }
@@ -212,16 +213,44 @@ namespace progahell
             }
         }
 
+
         private void ShowChoices()
         {
-            Scene scene = sceneManager.CurrentScene;
-            if (scene.Choices.Count > 0)
+            Scene currentScene = sceneManager.CurrentScene;
+
+            NextButton.Visibility = Visibility.Collapsed;
+            ChoicesPanel.Visibility = Visibility.Collapsed;
+            Choices_Back.Visibility = Visibility.Collapsed;
+            isShowingChoices = false;
+
+            if (currentScene.MiniGameType != "none")
             {
-                ChoicesPanel.ItemsSource = scene.Choices;
+                try
+                {
+                    var miniGame = MiniGameFactory.CreateGame(currentScene.MiniGameType);
+                    if (miniGame != null)
+                    {
+                        miniGame.Completed += (game) =>
+                        {
+                            scoreCalculator.AddScore(game.PlayerScore);
+                            sceneManager.GoTo(currentScene.NextSceneId);
+                        };
+                        miniGame.Start();
+                        return;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine($"Ошибка запуска мини-игры: {ex.Message}");
+                }
+            }
+
+            if (currentScene.Choices.Count > 0)
+            {
+                ChoicesPanel.ItemsSource = currentScene.Choices;
                 ChoicesPanel.Visibility = Visibility.Visible;
-                NextButton.Visibility = Visibility.Collapsed; //убиваем кнопку во время того как выборы показывается
+                Choices_Back.Visibility = Visibility.Visible;
                 isShowingChoices = true;
-                Choices_Back.Visibility = Visibility.Visible; // ща как трайну
             }
             else
             {
@@ -238,7 +267,6 @@ namespace progahell
                     sceneManager.GoTo(scene.NextSceneId);
                 }
             }
-
         }
 
         private void ShowEnding()
@@ -295,15 +323,34 @@ namespace progahell
         {
             if (sender is Button btn && btn.Tag is Choice choice)
             {
+                // Скрываем выборы
                 ChoicesPanel.Visibility = Visibility.Collapsed;
                 Choices_Back.Visibility = Visibility.Collapsed;
                 NextButton.Visibility = Visibility.Visible;
                 isShowingChoices = false;
 
-                ScoreCalculator.AddScore(choice.Score);
-                sceneManager.GoTo(choice.NextSceneId);
+                // Если выбор — мини-игра
+                if (choice.Type == "minigame")
+                {
+                    var miniGame = new ClickerMiniGame();
+                    miniGame.Completed += (game) =>
+                    {
+                        // Начисляем очки (только если победил)
+                        scoreCalculator.AddScore(game.PlayerScore);
+                        // Переходим к следующей сцене
+                        sceneManager.GoTo(choice.NextSceneId);
+                    };
+                    miniGame.Start();
+                }
+                else
+                {
+                    // Обычный выбор: просто добавляем очки и идём дальше
+                    scoreCalculator.AddScore(choice.Score);
+                    sceneManager.GoTo(choice.NextSceneId);
+                }
             }
         }
+        
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
@@ -360,5 +407,6 @@ namespace progahell
         public List<Choice> Choices { get; set; } = new();
         public List<DialogueLine> Dialogue { get; set; } = new();
         public Dictionary<string, string> CharacterLayout { get; set; } = new();
+        public string MiniGameType { get; set; } = "";
     }
 }
