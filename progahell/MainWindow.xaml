@@ -8,6 +8,19 @@
         Title="ProgaHELL" Height="900" Width="1600">
     
     <Grid>
+        <Grid x:Name="EndingOverlay" Visibility="Collapsed" Panel.ZIndex="100" Background="AliceBlue">
+            <Image x:Name="EndingBackground" Stretch="UniformToFill"/>
+
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <TextBlock x:Name="EndingTitle" FontSize="48" Foreground="White" TextAlignment="Center" Margin="0,0,0,20"/>
+                <TextBlock x:Name="EndingText" FontSize="24" Foreground="White" TextAlignment="Center" MaxWidth="600" TextWrapping="Wrap"/>
+            </StackPanel>
+
+            <Button x:Name="BackToMenuButton" Content="В МЕНЮ" 
+            HorizontalAlignment="Center" VerticalAlignment="Bottom" 
+            Margin="0,0,0,50" Padding="20,10" FontSize="20"
+            Click="BackToMenuButton_Click" Visibility="Collapsed"/>
+        </Grid>
         <Grid x:Name="MainGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>
@@ -86,7 +99,7 @@
                             VerticalAlignment="Bottom"/>
                             </Grid>
 
-                            <!--<TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>-->
+                            <TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>
 
                         </Grid>
                     </Grid>

@@ -16,14 +16,18 @@ namespace progahell
 
         public EndingType CalculateEnding(ScoreCalculator score)
         {
-            if (score.TotalScore >= 100)
-                return EndingType.Perfect;
-            if (score.TotalScore >= 60)
-                return EndingType.Good;
-            if (score.TotalScore < 30)
-                return EndingType.Bad;
+            int total = score.TotalScore;
 
-            return EndingType.Secret;
+            if (total == 0)
+                return EndingType.Secret;
+
+            if (total >= 75)
+                return EndingType.Perfect;
+
+            if (total >= 30)
+                return EndingType.Good;
+
+            return EndingType.Bad;
         }
     }
     public enum EndingType

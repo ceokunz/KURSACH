@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
 namespace progahell
 {
@@ -18,7 +19,7 @@ namespace progahell
     {
         private SceneManager sceneManager = new();
         private CharacterManager characterManager = new();
-        public ScoreCalculator ScoreCalculator { get; } = new();
+        public ScoreCalculator ScoreCalculator { get; set; } = new();
 
         private List<DialogueLine> currentDialogue = new();
         private int currentDialogueIndex = 0;
@@ -224,16 +225,56 @@ namespace progahell
             }
             else
             {
-                if (!string.IsNullOrEmpty(scene.NextSceneId))
-                {
-                    sceneManager.GoTo(scene.NextSceneId);
-                }
-                else
+                if (scene.NextSceneId == "go_to_ending")
                 {
                     ShowEnding();
                 }
+                else if (scene.NextSceneId == "show_credits_overlay")
+                {
+                    ShowCreditsOverlay();
+                }
+                else if (!string.IsNullOrEmpty(scene.NextSceneId))
+                {
+                    sceneManager.GoTo(scene.NextSceneId);
+                }
             }
 
+        }
+
+        private void ShowEnding()
+        {
+            var endingType = new EndingCalculator().CalculateEnding(ScoreCalculator);
+            string endingSceneId = endingType switch
+            {
+                EndingType.Perfect => "best",
+                EndingType.Good => "good",
+                EndingType.Bad => "bad",
+                EndingType.Secret => "secret"
+            };
+            sceneManager.GoTo(endingSceneId);
+        }
+
+        private void ShowCreditsOverlay()
+        {
+            EndingOverlay.Visibility = Visibility.Visible;
+
+            var timer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(3) }; //ну это же мега эпик? я дэб сорри
+            timer.Tick += (s, e) =>
+            {
+                timer.Stop();
+                BackToMenuButton.Visibility = Visibility.Visible;
+            };
+            timer.Start();
+        }
+
+        private void RestartGame()
+        {
+            ScoreCalculator = new ScoreCalculator();
+            currentDialogue.Clear();
+            currentDialogueIndex = 0;
+            isShowingChoices = false;
+
+            sceneManager.Start("start");
         }
 
         //=============================================================================== КЛИКИ
@@ -262,6 +303,14 @@ namespace progahell
                 ScoreCalculator.AddScore(choice.Score);
                 sceneManager.GoTo(choice.NextSceneId);
             }
+        }
+
+        private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            EndingOverlay.Visibility = Visibility.Collapsed;
+            BackToMenuButton.Visibility = Visibility.Collapsed;
+
+            RestartGame();
         }
 
         //=============================================================================== АНИМАЦИИ
