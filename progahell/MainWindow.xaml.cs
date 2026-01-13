@@ -232,7 +232,7 @@ namespace progahell
                     {
                         miniGame.Completed += (game) =>
                         {
-                            scoreCalculator.AddScore(game.PlayerScore);
+                            ScoreCalculator.AddScore(game.PlayerScore);
                             sceneManager.GoTo(currentScene.NextSceneId);
                         };
                         miniGame.Start();
@@ -254,17 +254,17 @@ namespace progahell
             }
             else
             {
-                if (scene.NextSceneId == "go_to_ending")
+                if (currentScene.NextSceneId == "go_to_ending")
                 {
                     ShowEnding();
                 }
-                else if (scene.NextSceneId == "show_credits_overlay")
+                else if (currentScene.NextSceneId == "show_credits_overlay")
                 {
                     ShowCreditsOverlay();
                 }
-                else if (!string.IsNullOrEmpty(scene.NextSceneId))
+                else if (!string.IsNullOrEmpty(currentScene.NextSceneId))
                 {
-                    sceneManager.GoTo(scene.NextSceneId);
+                    sceneManager.GoTo(currentScene.NextSceneId);
                 }
             }
         }
@@ -336,7 +336,7 @@ namespace progahell
                     miniGame.Completed += (game) =>
                     {
                         // Начисляем очки (только если победил)
-                        scoreCalculator.AddScore(game.PlayerScore);
+                        ScoreCalculator.AddScore(game.PlayerScore);
                         // Переходим к следующей сцене
                         sceneManager.GoTo(choice.NextSceneId);
                     };
@@ -345,7 +345,7 @@ namespace progahell
                 else
                 {
                     // Обычный выбор: просто добавляем очки и идём дальше
-                    scoreCalculator.AddScore(choice.Score);
+                    ScoreCalculator.AddScore(choice.Score);
                     sceneManager.GoTo(choice.NextSceneId);
                 }
             }

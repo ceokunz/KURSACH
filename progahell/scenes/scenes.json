@@ -3,7 +3,6 @@
     "Id": "start",
     "Title": "Начало",
     "NextSceneId": "start-0",
-    "MiniGameType":"puzzle",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
@@ -23,7 +22,7 @@
   {
     "Id": "start-0",
     "Title": "Начало",
-    "NextSceneId": "go_to_ending",
+    "NextSceneId": "start-1",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
@@ -635,6 +634,7 @@
     "Id": "lecture-2",
     "Title": "На лекции",
     "NextSceneId": "lecture-3",
+    "MiniGameType": "clicker",
     "Description": "Злата на лекции, Валера опаздывает",
     "BackgroundPath": "Res/Background_Bus.png",
     "Dialogue": [
@@ -755,6 +755,7 @@
     "Id": "lecture-6",
     "Title": "На лекции",
     "NextSceneId": "visual",
+    "MiniGameType": "puzzle",
     "Description": "Злата на лекции, Валера опаздывает",
     "BackgroundPath": "Res/Background_Lecture.png",
     "Dialogue": [
