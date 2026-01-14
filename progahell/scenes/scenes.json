@@ -1440,7 +1440,7 @@
         },
         {
           "SpeakerId": "storyteller",
-          "Text": "Ушли счастливые с пятерками в зачетках, отметили сырной пиццей с додобонами.",
+          "Text": "Ушли счастливые с допуском к завтрашнему экзамену, отметили сырной пиццей с додобонами.",
           "Emote": "Neutral"
         },
         {
@@ -1451,6 +1451,26 @@
         {
           "SpeakerId": "storyteller",
           "Text": "Изи катка.",
+          "Emote": "Neutral"
+        },
+        {
+          "SpeakerId": "storyteller",
+          "Text": "...",
+          "Emote": "Neutral"
+        },
+        {
+          "SpeakerId": "storyteller",
+          "Text": "Стоп.",
+          "Emote": "Neutral"
+        },
+        {
+          "SpeakerId": "storyteller",
+          "Text": "А они успели подготовиться к экзамену?..",
+          "Emote": "Neutral"
+        },
+        {
+          "SpeakerId": "storyteller",
+          "Text": "...",
           "Emote": "Neutral"
         },
         {
