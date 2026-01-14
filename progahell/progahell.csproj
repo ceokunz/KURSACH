@@ -18,7 +18,11 @@
     <None Remove="Res\A_angry.PNG" />
     <None Remove="Res\A_neutral.PNG" />
     <None Remove="Res\A_sad.PNG" />
+    <None Remove="Res\Background_Blackout.png" />
+    <None Remove="Res\Background_Bus.png" />
     <None Remove="Res\Background_Discord.png" />
+    <None Remove="Res\Background_Door.png" />
+    <None Remove="Res\Background_Holl.png" />
     <None Remove="Res\Background_Lecture.png" />
     <None Remove="Res\Background_Polegon.png" />
     <None Remove="Res\Background_Zlata_Room.png" />
@@ -70,7 +74,19 @@
     <Resource Include="Elements\choice_button.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Res\Background_Blackout.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Bus.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Res\Background_Discord.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Door.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Holl.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\Background_Lecture.png">

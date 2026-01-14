@@ -323,7 +323,11 @@ namespace progahell
             currentDialogueIndex = 0;
             isShowingChoices = false;
 
-            sceneManager.Start("start");
+            EndingOverlay.Visibility = Visibility.Collapsed;
+            BackToMenuButton.Visibility = Visibility.Collapsed;
+
+            StartOverlay.Visibility = Visibility.Visible;
+            StartGameButton.Visibility = Visibility.Visible;
         }
 
         //=============================================================================== КЛИКИ
@@ -376,9 +380,6 @@ namespace progahell
 
         private void BackToMenuButton_Click(object sender, RoutedEventArgs e)
         {
-            EndingOverlay.Visibility = Visibility.Collapsed;
-            BackToMenuButton.Visibility = Visibility.Collapsed;
-
             RestartGame();
         }
 

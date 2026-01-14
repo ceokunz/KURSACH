@@ -606,6 +606,11 @@
         "SpeakerId": "storyteller",
         "Text": "Лекция уже началась, а Валера всё ещё в пути.",
         "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Злата тревожненько позвонила Валере...",
+        "Emote": "Neutral"
       }
     ],
     "Choices": [],
@@ -620,18 +625,18 @@
     "Title": "На лекции",
     "NextSceneId": "lecture-2",
     "Description": "Злата на лекции, Валера опаздывает",
-    "BackgroundPath": "Res/Background_Telegram.png",
+    "BackgroundPath": "Res/Background_Holl.png",
     "Dialogue": [
       {
         "SpeakerId": "zlata",
         "Text": "Валер, ты где? Mакс уже пришел, хоть и опоздал на 10 минут!",
-        "Emote": "Neutral"
+        "Emote": "Happy"
       }
     ],
     "Choices": [],
     "CharacterLayout": {
       "Left": "",
-      "Center": "",
+      "Center": "zlata",
       "Right": ""
     }
   },

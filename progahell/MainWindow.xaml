@@ -34,6 +34,8 @@
         <Grid x:Name="EndingOverlay" Visibility="Collapsed" Panel.ZIndex="100">
             <Image x:Name="EndingBackground" Stretch="UniformToFill" Source="Elements/Background_Credits.png"/>
             <Button x:Name="BackToMenuButton" Content="В МЕНЮ" 
+            Style="{StaticResource NextButtonStyle}"
+            Height="80"
             HorizontalAlignment="Center" VerticalAlignment="Bottom" 
             Margin="0,0,0,50" Padding="20,10" FontSize="20"
             Click="BackToMenuButton_Click" Visibility="Collapsed"/>
@@ -109,7 +111,7 @@
 
                             <Grid Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                                 <Button x:Name="NextButton" Width="200" Height="90"
-                            Content="NEXT"
+                            Content="ДАЛЕЕ"
                             Click="Next_Click"
                             Visibility="Visible"
                             Style="{StaticResource NextButtonStyle}"
