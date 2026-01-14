@@ -2,7 +2,7 @@
   {
     "Id": "start",
     "Title": "Начало",
-    "NextSceneId": "discord",
+    "NextSceneId": "start-0",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [
@@ -106,7 +106,12 @@
     "Dialogue": [
       {
         "SpeakerId": "alex",
-        "Text": "Да-да, отлично!",
+        "Text": "Да-да!",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "alex",
+        "Text": "Конечно же они готовы!",
         "Emote": "Neutral"
       },
       {
@@ -141,7 +146,7 @@
     "Dialogue": [
       {
         "SpeakerId": "MandA",
-        "Text": "«Многослойная верификация валидации модуля инициализации конфигурационных параметров среды исполнения»",
+        "Text": "«Многослойная верификация валидации модуля инициализации конфигурационных параметров среды исполнения»...",
         "Emote": "Neutral"
       }
     ],
@@ -162,7 +167,7 @@
       {
         "SpeakerId": "ZandV",
         "Text": "ПОЖАЛУЙСТА ХВАТИТ!!!",
-        "Emote": "Neutral"
+        "Emote": "Sad"
       }
     ],
     "Choices": [],

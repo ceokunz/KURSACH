@@ -10,13 +10,13 @@
     <Grid>
         <Grid x:Name="StartOverlay" Visibility="Visible" Panel.ZIndex="100" >
             <Image x:Name="StartBackground"
-           Source="/Res/Backgrounds/start_bg.jpg"
+           Source="Elements/Background_start.png"
            Stretch="UniformToFill"/>
             <Image x:Name="TitleImage"
-           Source="/Res/UI/game_title.png"
-           Width="600"
+           Source="Elements/Logo.png"
+           Width="1000"
            VerticalAlignment="Top"
-           Margin="0,100,0,0"
+           Margin="0,190,0,0"
            RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TranslateTransform x:Name="TitleTransform" Y="0"/>
@@ -26,10 +26,10 @@
             Content="НАЧАТЬ ИГРУ"
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom"
-            Margin="0,0,0,50"
-            Padding="20,10"
+            Height="80"
             FontSize="20"
-            Click="StartGameButton_Click"/>
+            Style="{StaticResource NextButtonStyle}"
+            Click="StartGameButton_Click" Margin="5,5,5,50"/>
         </Grid>
         <Grid x:Name="EndingOverlay" Visibility="Collapsed" Panel.ZIndex="100">
             <Image x:Name="EndingBackground" Stretch="UniformToFill" Source="Elements/Background_Credits.png"/>

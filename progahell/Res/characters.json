@@ -43,10 +43,10 @@
     "Id": "ZandV",
     "Name": "Злата и Валера",
     "SpritePaths": {
-      "Happy": "Res/ZlataValTogether.png",
-      "Sad": "Res/ZlataValTogether.png",
-      "Angry": "Res/ZlataValTogether.png",
-      "Neutral": "Res/ZlataValTogether.png"
+      "Happy": "Res/ZlataValTogether_happy.png",
+      "Sad": "Res/ZlataValTogether_Sad.png",
+      "Angry": "Res/ZlataValTogether_happy.png",
+      "Neutral": "Res/ZlataValTogether_happy.png"
     }
   },
   {

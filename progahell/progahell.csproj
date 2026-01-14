@@ -10,7 +10,9 @@
 
   <ItemGroup>
     <None Remove="Elements\Background_Credits.png" />
+    <None Remove="Elements\Background_start.png" />
     <None Remove="Elements\dialogue_window.png" />
+    <None Remove="Elements\Logo.png" />
     <None Remove="Elements\next_button.png" />
     <None Remove="Res\.png" />
     <None Remove="Res\A_angry.PNG" />
@@ -31,6 +33,8 @@
     <None Remove="Res\V_neutral.PNG" />
     <None Remove="Res\V_sad.PNG" />
     <None Remove="Res\ZlataValTogether.png" />
+    <None Remove="Res\ZlataValTogether_happy.PNG" />
+    <None Remove="Res\ZlataValTogether_sad.png" />
     <None Remove="Res\Z_angry.PNG" />
     <None Remove="Res\Z_happy.PNG" />
     <None Remove="Res\Z_neutral.PNG" />
@@ -42,8 +46,14 @@
     <Resource Include="Elements\Background_Credits.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Elements\Background_start.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Elements\dialogue_window.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Elements\Logo.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Elements\next_button.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -105,7 +115,10 @@
     <Resource Include="Res\V_neutral.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Res\ZlataValTogether.png">
+    <Resource Include="Res\ZlataValTogether_happy.PNG">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\ZlataValTogether_sad.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\Z_angry.PNG">
