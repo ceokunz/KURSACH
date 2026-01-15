@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 
 namespace progahell
 {
@@ -43,13 +44,18 @@ namespace progahell
 
         private void CreateWindow()
         {
+            var backgroundBrush = new ImageBrush
+            {
+                ImageSource = new BitmapImage(new Uri("pack://application:,,,/Elements/Background_Puzzle.png")),
+                Stretch = Stretch.UniformToFill
+            };
             _window = new Window
             {
                 Title = "Мини-игра: Мотивация",
                 Width = 800,
                 Height = 550,
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
-                Background = new SolidColorBrush(Color.FromRgb(20, 10, 30))
+                Background =  backgroundBrush
             };
 
             var grid = new Grid();
@@ -62,10 +68,8 @@ namespace progahell
             leftPanel.Children.Add(new TextBlock
             {
                 Text = "Восстанови мотивацию Валеры и Златы",
-                Foreground = Brushes.Gold,
-                FontSize = 18,
-                FontWeight = FontWeights.Bold,
                 HorizontalAlignment = HorizontalAlignment.Center,
+                Style = (Style)Application.Current.FindResource("TextBlockGameStyleTitle"),
                 Margin = new Thickness(0, 0, 0, 20)
             });
 
@@ -74,8 +78,7 @@ namespace progahell
                 var label = new TextBlock
                 {
                     Text = $"Ответ {i + 1}:",
-                    Foreground = Brushes.LightSalmon,
-                    FontSize = 14,
+                    Style = (Style)Application.Current.FindResource("TextBlockGameStyleString"),
                     Margin = new Thickness(0, 0, 0, 5)
                 };
                 leftPanel.Children.Add(label);
@@ -84,20 +87,16 @@ namespace progahell
                 {
                     Width = 320,
                     MinHeight = 50,
-                    Background = new SolidColorBrush(Color.FromRgb(30, 15, 40)),
-                    BorderBrush = Brushes.DarkRed,
-                    BorderThickness = new Thickness(2),
-                    CornerRadius = new CornerRadius(6),
                     Padding = new Thickness(10),
                     Tag = i,
+                    Style = (Style)Application.Current.FindResource("BorderStyle"),
                     AllowDrop = true
                 };
 
                 var placeholder = new TextBlock
                 {
                     Text = "Перетащи сюда фразу",
-                    Foreground = Brushes.Gray,
-                    FontStyle = FontStyles.Italic,
+                    Style = (Style)Application.Current.FindResource("TextBlockGameStyle"),
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center
                 };
@@ -117,11 +116,10 @@ namespace progahell
             var checkButton = new Button
             {
                 Content = "Восстановить",
-                FontSize = 16,
+                Style = (Style)Application.Current.FindResource("ChoiceButtonStyle"),
                 Padding = new Thickness(10),
                 Margin = new Thickness(0, 30, 0, 0),
-                Background = Brushes.DarkRed,
-                Foreground = Brushes.White
+                
             };
             checkButton.Click += (s, e) => CheckSolution();
             leftPanel.Children.Add(checkButton);
@@ -135,9 +133,7 @@ namespace progahell
             rightPanel.Children.Add(new TextBlock
             {
                 Text = "Мотивационные фразы:",
-                Foreground = Brushes.Yellow,
-                FontSize = 18,
-                FontWeight = FontWeights.Bold,
+                Style = (Style)Application.Current.FindResource("TextBlockGameStyleTitle"),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Margin = new Thickness(0, 0, 0, 20)
             });
@@ -148,11 +144,9 @@ namespace progahell
                 {
                     Width = 320,
                     MinHeight = 50,
-                    Background = new SolidColorBrush(Color.FromRgb(60, 30, 80)),
-                    BorderBrush = Brushes.Gold,
-                    BorderThickness = new Thickness(1),
-                    CornerRadius = new CornerRadius(5),
+
                     Padding = new Thickness(10),
+                    Style = (Style)Application.Current.FindResource("BorderStyleRed"),
                     Margin = new Thickness(0, 0, 0, 12),
                     Cursor = Cursors.Hand
                 };
@@ -160,8 +154,7 @@ namespace progahell
                 var text = new TextBlock
                 {
                     Text = phrase,
-                    Foreground = Brushes.White,
-                    FontSize = 14,
+                    Style = (Style)Application.Current.FindResource("TextBlockGameStyle"),
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center,
                     TextWrapping = TextWrapping.Wrap,
@@ -199,8 +192,7 @@ namespace progahell
             zone.Child = new TextBlock
             {
                 Text = text,
-                Foreground = Brushes.White,
-                FontSize = 14,
+                Style = (Style)Application.Current.FindResource("TextBlockGameStyleGreen"),
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 TextWrapping = TextWrapping.Wrap,
