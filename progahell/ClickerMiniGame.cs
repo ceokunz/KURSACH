@@ -17,17 +17,17 @@ namespace progahell
 
         public event Action<IMiniGame> Completed;
 
-        // === Настройки геймплея ===
-        private const float TargetPosition = 100f;
+        //гейплей
+        private const float TargetPosition = 200f;
         private const float DriftSpeed = 5f;
-        private const float DriftIntervalSeconds = 0.2f; // ← как часто
+        private const float DriftIntervalSeconds = 0.3f;
         private const float ClickStep = 5f;           
         private const int TimeLimitSeconds = 30;       
 
         private float currentPosition = 0f;
         private int timeLeft = TimeLimitSeconds;
         private bool isGameActive = true;
-        private DispatcherTimer countdownTimer; // ← для времени
+        private DispatcherTimer countdownTimer;
 
         private Window gameWindow;
         private DispatcherTimer driftTimer;
@@ -45,77 +45,78 @@ namespace progahell
 
         private void CreateAndShowWindow()
         {
-            // Создаём новое окно для мини-игры
+            // новое окно мини-игры
             gameWindow = new Window
             {
                 Title = Name,
-                Width = 500,
-                Height = 350,
+                Width = 700,
+                Height = 550,
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
                 ResizeMode = ResizeMode.NoResize,
                 Background = Brushes.Black
             };
 
             var grid = new Grid();
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(40) }); // Позиция
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(40) }); // Таймер
-            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(30) }); // Прогресс
+            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(80) }); // Позиция
+            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) }); // Таймер
+            grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(80) }); // Прогресс
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(80) }); // Кнопка
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(40) }); // Статус
 
-            // Текст: позиция
+            //позиция
             positionText = new TextBlock
             {
                 Foreground = Brushes.White,
                 HorizontalAlignment = HorizontalAlignment.Center,
-                FontSize = 18,
+                VerticalAlignment = VerticalAlignment.Center,
+                Style = (Style)Application.Current.FindResource("TextBlockGameStyle"),
                 Margin = new Thickness(10)
             };
             Grid.SetRow(positionText, 0);
             grid.Children.Add(positionText);
 
-            // Текст: таймер
+            //таймер
             timerText = new TextBlock
             {
                 Foreground = Brushes.White,
                 HorizontalAlignment = HorizontalAlignment.Center,
-                FontSize = 18,
+                Style = (Style)Application.Current.FindResource("TextBlockGameStyle"),
                 Margin = new Thickness(10)
             };
             Grid.SetRow(timerText, 1);
             grid.Children.Add(timerText);
 
-            // Прогресс-бар
+            // прогресс-бар
             progressBar = new ProgressBar
             {
                 Minimum = 0,
                 Maximum = TargetPosition,
                 Value = 0,
+                Width = 500,
+                Style = (Style)Application.Current.FindResource("ProgressBarStyle"),
                 Margin = new Thickness(20, 0, 20, 0)
             };
             Grid.SetRow(progressBar, 2);
             grid.Children.Add(progressBar);
 
-            // Кнопка "клик"
+            // кнопка
             clickButton = new Button
             {
-                Content = "КЛИКНИ, ЧТОБЫ ДВИНУТЬСЯ ВПЕРЁД!",
-                FontSize = 16,
-                Margin = new Thickness(20),
-                Background = Brushes.DarkRed,
-                Foreground = Brushes.White
+                Content = "БЕЖАТЬ!",
+                Style = (Style)Application.Current.FindResource("NextButtonStyle"),
+                Foreground = Brushes.OrangeRed
             };
             clickButton.Click += (s, e) => OnClick();
             Grid.SetRow(clickButton, 3);
             grid.Children.Add(clickButton);
 
-            // Статус (победа/поражение)
+            // Статус
             statusText = new TextBlock
             {
                 Foreground = Brushes.Yellow,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 FontSize = 16,
-                Text = "Успей добраться до цели за 30 секунд!",
+                Text = "Успей на лекцию за 30 секунд!",
                 Margin = new Thickness(10)
             };
             Grid.SetRow(statusText, 4);
@@ -123,7 +124,6 @@ namespace progahell
 
             gameWindow.Content = grid;
 
-            // Если игрок закроет окно — считаем поражение
             gameWindow.Closed += (s, e) => ForceEnd();
 
             gameWindow.Show();
@@ -133,7 +133,6 @@ namespace progahell
         {
             UpdateUI();
 
-            // === Таймер отката (быстрый) ===
             driftTimer = new DispatcherTimer
             {
                 Interval = TimeSpan.FromSeconds(DriftIntervalSeconds)
@@ -147,7 +146,6 @@ namespace progahell
             };
             driftTimer.Start();
 
-            // === Таймер обратного отсчёта (раз в секунду) ===
             countdownTimer = new DispatcherTimer
             {
                 Interval = TimeSpan.FromSeconds(1)
@@ -156,7 +154,7 @@ namespace progahell
             {
                 if (!isGameActive) return;
                 timeLeft--;
-                CheckGameState(); // на случай, если время вышло
+                CheckGameState();
                 UpdateUI();
             };
             countdownTimer.Start();
@@ -184,7 +182,7 @@ namespace progahell
 
         private void Win()
         {
-            statusText.Text = "✅ ПОБЕДА! Ты вырвался из Ада!";
+            statusText.Text = "Валера успел на лекцию!";
             statusText.Foreground = Brushes.GreenYellow;
             clickButton.IsEnabled = false;
             EndGame(true);
@@ -192,7 +190,7 @@ namespace progahell
 
         private void Lose()
         {
-            statusText.Text = "💀 ПОРАЖЕНИЕ... Время вышло.";
+            statusText.Text = "Валера застрял в заборе и опоздал на полчаса...";
             statusText.Foreground = Brushes.Red;
             clickButton.IsEnabled = false;
             EndGame(false);
@@ -237,8 +235,8 @@ namespace progahell
 
             Application.Current.Dispatcher.Invoke(() =>
             {
-                positionText.Text = $"Позиция: {Math.Max(0, (int)currentPosition)} / {(int)TargetPosition}";
-                timerText.Text = $"Времени осталось: {Math.Max(0, timeLeft)} сек";
+                positionText.Text = $"Осталось до универа: {Math.Max(0, (int)currentPosition)} / {(int)TargetPosition}";
+                timerText.Text = $"Осталось {Math.Max(0, timeLeft)} секунд";
                 progressBar.Value = Math.Min(TargetPosition, Math.Max(0, currentPosition));
             });
         }
