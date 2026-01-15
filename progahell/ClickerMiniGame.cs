@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 
 namespace progahell
@@ -45,15 +46,20 @@ namespace progahell
 
         private void CreateAndShowWindow()
         {
+            var backgroundBrush = new ImageBrush
+            {
+                ImageSource = new BitmapImage(new Uri("pack://application:,,,/Elements/Background_Clicker.png")),
+                Stretch = Stretch.UniformToFill
+            };
             // новое окно мини-игры
             gameWindow = new Window
             {
                 Title = Name,
-                Width = 700,
-                Height = 550,
+                Width = 750,
+                Height = 400,
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
                 ResizeMode = ResizeMode.NoResize,
-                Background = Brushes.Black
+                Background = backgroundBrush
             };
 
             var grid = new Grid();
@@ -63,22 +69,19 @@ namespace progahell
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(80) }); // Кнопка
             grid.RowDefinitions.Add(new RowDefinition { Height = new GridLength(40) }); // Статус
 
-            //позиция
-            positionText = new TextBlock
+            statusText = new TextBlock
             {
-                Foreground = Brushes.White,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 VerticalAlignment = VerticalAlignment.Center,
                 Style = (Style)Application.Current.FindResource("TextBlockGameStyle"),
-                Margin = new Thickness(10)
+                Text = "Успей на лекцию за 30 секунд!",
             };
-            Grid.SetRow(positionText, 0);
-            grid.Children.Add(positionText);
+            Grid.SetRow(statusText, 0);
+            grid.Children.Add(statusText);
 
             //таймер
             timerText = new TextBlock
             {
-                Foreground = Brushes.White,
                 HorizontalAlignment = HorizontalAlignment.Center,
                 Style = (Style)Application.Current.FindResource("TextBlockGameStyle"),
                 Margin = new Thickness(10)
@@ -104,23 +107,23 @@ namespace progahell
             {
                 Content = "БЕЖАТЬ!",
                 Style = (Style)Application.Current.FindResource("NextButtonStyle"),
-                Foreground = Brushes.OrangeRed
+                Foreground = Brushes.IndianRed
             };
             clickButton.Click += (s, e) => OnClick();
             Grid.SetRow(clickButton, 3);
             grid.Children.Add(clickButton);
 
-            // Статус
-            statusText = new TextBlock
+            //позиция
+            positionText = new TextBlock
             {
-                Foreground = Brushes.Yellow,
                 HorizontalAlignment = HorizontalAlignment.Center,
-                FontSize = 16,
-                Text = "Успей на лекцию за 30 секунд!",
+                VerticalAlignment = VerticalAlignment.Center,
+                Style = (Style)Application.Current.FindResource("TextBlockGameStyle"),
                 Margin = new Thickness(10)
             };
-            Grid.SetRow(statusText, 4);
-            grid.Children.Add(statusText);
+            Grid.SetRow(positionText, 4);
+            grid.Children.Add(positionText);
+
 
             gameWindow.Content = grid;
 
@@ -183,7 +186,7 @@ namespace progahell
         private void Win()
         {
             statusText.Text = "Валера успел на лекцию!";
-            statusText.Foreground = Brushes.GreenYellow;
+            statusText.Foreground = Brushes.Green;
             clickButton.IsEnabled = false;
             EndGame(true);
         }

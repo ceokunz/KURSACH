@@ -33,7 +33,7 @@ namespace progahell
             }
             else
             {
-                // обработка ошибки
+                
             }
         }
     }

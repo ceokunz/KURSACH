@@ -9,6 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Elements\Background_Clicker.png" />
     <None Remove="Elements\Background_Credits.png" />
     <None Remove="Elements\Background_start.png" />
     <None Remove="Elements\dialogue_window.png" />
@@ -51,6 +52,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Elements\Background_Clicker.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Elements\Background_Credits.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
