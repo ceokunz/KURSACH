@@ -10,22 +10,24 @@ namespace progahell
     public class ClickerMiniGame : IMiniGame
     {
         private bool _isCompleted = false;
-        public string Name { get; private set; } = "Бегство из Преисподней";
+        public string Name { get; private set; } = "Успей на лекцию";
         public string GameType { get; private set; } = "clicker";
-        public int MaxScore { get; private set; } = 100;
+        public int MaxScore { get; private set; } = 20;
         public int PlayerScore { get; private set; }
 
         public event Action<IMiniGame> Completed;
 
         // === Настройки геймплея ===
         private const float TargetPosition = 100f;
-        private const float DriftSpeed = 1f;           
+        private const float DriftSpeed = 5f;
+        private const float DriftIntervalSeconds = 0.2f; // ← как часто
         private const float ClickStep = 5f;           
         private const int TimeLimitSeconds = 30;       
 
         private float currentPosition = 0f;
         private int timeLeft = TimeLimitSeconds;
         private bool isGameActive = true;
+        private DispatcherTimer countdownTimer; // ← для времени
 
         private Window gameWindow;
         private DispatcherTimer driftTimer;
@@ -131,17 +133,33 @@ namespace progahell
         {
             UpdateUI();
 
-            // Таймер отката (раз в секунду)
-            driftTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
+            // === Таймер отката (быстрый) ===
+            driftTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(DriftIntervalSeconds)
+            };
             driftTimer.Tick += (s, e) =>
             {
                 if (!isGameActive) return;
                 currentPosition -= DriftSpeed;
-                timeLeft--;
                 CheckGameState();
                 UpdateUI();
             };
             driftTimer.Start();
+
+            // === Таймер обратного отсчёта (раз в секунду) ===
+            countdownTimer = new DispatcherTimer
+            {
+                Interval = TimeSpan.FromSeconds(1)
+            };
+            countdownTimer.Tick += (s, e) =>
+            {
+                if (!isGameActive) return;
+                timeLeft--;
+                CheckGameState(); // на случай, если время вышло
+                UpdateUI();
+            };
+            countdownTimer.Start();
         }
 
         private void OnClick()
@@ -197,6 +215,7 @@ namespace progahell
 
             isGameActive = false;
             driftTimer?.Stop();
+            countdownTimer?.Stop();
 
             PlayerScore = win ? MaxScore : 0;
 
