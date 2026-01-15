@@ -119,7 +119,7 @@
                             VerticalAlignment="Bottom"/>
                             </Grid>
 
-                            <!--<TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>-->
+                            <TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>
 
                         </Grid>
                     </Grid>

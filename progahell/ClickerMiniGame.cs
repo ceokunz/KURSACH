@@ -9,6 +9,7 @@ namespace progahell
 {
     public class ClickerMiniGame : IMiniGame
     {
+        private bool _isCompleted = false;
         public string Name { get; private set; } = "Бегство из Преисподней";
         public string GameType { get; private set; } = "clicker";
         public int MaxScore { get; private set; } = 100;
@@ -17,17 +18,15 @@ namespace progahell
         public event Action<IMiniGame> Completed;
 
         // === Настройки геймплея ===
-        private const float TargetPosition = 100f;     // Финальная точка
-        private const float DriftSpeed = 1f;           // Откат назад в секунду
-        private const float ClickStep = 5f;            // Прогресс за клик
-        private const int TimeLimitSeconds = 30;       // Время на прохождение
+        private const float TargetPosition = 100f;
+        private const float DriftSpeed = 1f;           
+        private const float ClickStep = 5f;           
+        private const int TimeLimitSeconds = 30;       
 
-        // === Внутренние переменные ===
         private float currentPosition = 0f;
         private int timeLeft = TimeLimitSeconds;
         private bool isGameActive = true;
 
-        // === UI элементы ===
         private Window gameWindow;
         private DispatcherTimer driftTimer;
         private TextBlock positionText;
@@ -167,26 +166,25 @@ namespace progahell
 
         private void Win()
         {
-            EndGame(true);
-            PlayerScore = MaxScore;
             statusText.Text = "✅ ПОБЕДА! Ты вырвался из Ада!";
             statusText.Foreground = Brushes.GreenYellow;
             clickButton.IsEnabled = false;
+            EndGame(true);
         }
 
         private void Lose()
         {
-            EndGame(false);
-            PlayerScore = 0;
             statusText.Text = "💀 ПОРАЖЕНИЕ... Время вышло.";
             statusText.Foreground = Brushes.Red;
             clickButton.IsEnabled = false;
+            EndGame(false);
         }
 
         private void ForceEnd()
         {
-            if (isGameActive)
+            if (!_isCompleted)
             {
+                _isCompleted = true;
                 PlayerScore = 0;
                 Completed?.Invoke(this);
             }
@@ -194,18 +192,20 @@ namespace progahell
 
         private void EndGame(bool win)
         {
-            if (!isGameActive) return;
+            if (_isCompleted) return;
+            _isCompleted = true;
+
             isGameActive = false;
             driftTimer?.Stop();
 
-            // Через 2 секунды закрываем окно автоматически
+            PlayerScore = win ? MaxScore : 0;
+
             _ = Task.Run(async () =>
             {
                 await Task.Delay(2000);
                 Application.Current.Dispatcher.Invoke(() =>
                 {
-                    if (gameWindow != null && gameWindow.IsVisible)
-                        gameWindow.Close();
+                    gameWindow?.Close();
                 });
             });
 

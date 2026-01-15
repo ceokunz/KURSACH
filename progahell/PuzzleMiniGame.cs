@@ -8,7 +8,8 @@ namespace progahell
 {
     public class PuzzleMiniGame : IMiniGame
     {
-        public string Name => "Ритуал вызова";
+        private bool _isCompleted = false;
+        public string Name => "Ритуал поднятия мотивации";
         public string GameType => "ritual";
         public int MaxScore => 100;
         public int PlayerScore { get; private set; }
@@ -209,7 +210,6 @@ namespace progahell
 
         private void CheckSolution()
         {
-            // Собираем выбранные фразы (игнорируем пустые)
             var selected = new System.Collections.Generic.HashSet<string>();
             foreach (var answer in _currentAnswers)
             {
@@ -219,10 +219,8 @@ namespace progahell
                 }
             }
 
-            // Правильные фразы
             var correctSet = new System.Collections.Generic.HashSet<string>(_correctOrder);
 
-            // Проверяем: содержит ли выбранный набор ВСЕ правильные фразы
             bool isCorrect = correctSet.IsSubsetOf(selected) && selected.Count == 3;
 
             if (isCorrect)
@@ -251,14 +249,21 @@ namespace progahell
 
         private void EndGame()
         {
+            if (_isCompleted) return;
+            _isCompleted = true;
+
             _window?.Close();
             Completed?.Invoke(this);
         }
 
         private void ForceEnd()
         {
-            PlayerScore = 0;
-            Completed?.Invoke(this);
+            if (!_isCompleted)
+            {
+                PlayerScore = 0;
+                _isCompleted = true;
+                Completed?.Invoke(this);
+            }
         }
     }
 }

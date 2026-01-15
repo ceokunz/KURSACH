@@ -28,7 +28,7 @@ namespace progahell
         public MainWindow()
         {
             InitializeComponent();
-            LoadGameData(); //загрузка файлов игры
+            LoadGameData();
 
             sceneManager.SceneChanged += OnSceneChanged;
             
@@ -348,31 +348,14 @@ namespace progahell
         {
             if (sender is Button btn && btn.Tag is Choice choice)
             {
-                // Скрываем выборы
                 ChoicesPanel.Visibility = Visibility.Collapsed;
                 Choices_Back.Visibility = Visibility.Collapsed;
                 NextButton.Visibility = Visibility.Visible;
                 isShowingChoices = false;
 
-                // Если выбор — мини-игра
-                if (choice.Type == "minigame")
-                {
-                    var miniGame = new ClickerMiniGame();
-                    miniGame.Completed += (game) =>
-                    {
-                        // Начисляем очки (только если победил)
-                        ScoreCalculator.AddScore(game.PlayerScore);
-                        // Переходим к следующей сцене
-                        sceneManager.GoTo(choice.NextSceneId);
-                    };
-                    miniGame.Start();
-                }
-                else
-                {
-                    // Обычный выбор: просто добавляем очки и идём дальше
-                    ScoreCalculator.AddScore(choice.Score);
-                    sceneManager.GoTo(choice.NextSceneId);
-                }
+                ScoreCalculator.AddScore(choice.Score);
+                sceneManager.GoTo(choice.NextSceneId);
+                
             }
 
         }
