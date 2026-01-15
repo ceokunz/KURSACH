@@ -12,7 +12,7 @@ namespace progahell
         private bool _isCompleted = false;
         public string Name => "Ритуал поднятия мотивации";
         public string GameType => "ritual";
-        public int MaxScore => 100;
+        public int MaxScore => 10;
         public int PlayerScore { get; private set; }
 
         public event Action<IMiniGame> Completed;
@@ -51,9 +51,9 @@ namespace progahell
             };
             _window = new Window
             {
-                Title = "Мини-игра: Мотивация",
-                Width = 800,
-                Height = 550,
+                Title = "Мотивация",
+                Width = 1300,
+                Height = 700,
                 WindowStartupLocation = WindowStartupLocation.CenterScreen,
                 Background =  backgroundBrush
             };
