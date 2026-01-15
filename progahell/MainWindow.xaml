@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:progahell"
         mc:Ignorable="d"
-        Title="ProgaHELL" Height="900" Width="1600">
+        Title="ProgaHELL"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="NoResize">
     
     <Grid>
         <Grid x:Name="StartOverlay" Visibility="Visible" Panel.ZIndex="100" >
@@ -31,6 +34,7 @@
             Style="{StaticResource NextButtonStyle}"
             Click="StartGameButton_Click" Margin="5,5,5,50"/>
         </Grid>
+        
         <Grid x:Name="EndingOverlay" Visibility="Collapsed" Panel.ZIndex="100">
             <Image x:Name="EndingBackground" Stretch="UniformToFill" Source="Elements/Background_Credits.png"/>
             <Button x:Name="BackToMenuButton" Content="В МЕНЮ" 
@@ -40,7 +44,17 @@
             Margin="0,0,0,50" Padding="20,10" FontSize="20"
             Click="BackToMenuButton_Click" Visibility="Collapsed"/>
         </Grid>
-        
+
+        <DockPanel Height="100" VerticalAlignment="Top" Panel.ZIndex="200">
+            <Button Content="×"
+            DockPanel.Dock="Right"
+            Width="50"
+            Height="50"
+            HorizontalAlignment="Right"
+            Click="CloseGameButton_Click"
+            Style="{StaticResource CloseButtonStyle}"/>
+        </DockPanel>
+
         <Grid x:Name="MainGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="1*"/>

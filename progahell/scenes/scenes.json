@@ -1,6 +1,7 @@
 [
   {
     "Id": "start",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-0",
     "Description": "Вы получаете задание на курсач",
@@ -21,6 +22,7 @@
   },
   {
     "Id": "start-0",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-1",
     "Description": "Вы получаете задание на курсач",
@@ -42,6 +44,7 @@
   },
   {
     "Id": "start-1",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-2",
     "Description": "Вы получаете задание на курсач",
@@ -73,6 +76,7 @@
   },
   {
     "Id": "start-2",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-3",
     "Description": "Вы получаете задание на курсач",
@@ -99,6 +103,7 @@
   },
   {
     "Id": "start-3",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-4",
     "Description": "Вы получаете задание на курсач",
@@ -139,6 +144,7 @@
   },
   {
     "Id": "start-4",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-5",
     "Description": "Вы получаете задание на курсач",
@@ -159,6 +165,7 @@
   },
   {
     "Id": "start-5",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-6",
     "Description": "Вы получаете задание на курсач",
@@ -179,6 +186,7 @@
   },
   {
     "Id": "start-6",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-7",
     "Description": "Вы получаете задание на курсач",
@@ -224,6 +232,7 @@
   },
   {
     "Id": "start-7",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-8",
     "Description": "Вы получаете задание на курсач",
@@ -249,6 +258,7 @@
   },
   {
     "Id": "start-8",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "start-9",
     "Description": "Вы получаете задание на курсач",
@@ -269,6 +279,7 @@
   },
   {
     "Id": "start-9",
+    "BackgroundMusic": "main_theme",
     "Title": "Начало",
     "NextSceneId": "u_zlaty",
     "Description": "Вы получаете задание на курсач",
@@ -322,6 +333,7 @@
 
   {
     "Id": "u_zlaty",
+    "BackgroundMusic": "room_theme",
     "Title": "У Златы",
     "NextSceneId": "u_zlaty-1",
     "Description": "Валера и Злата пришли к ней в гости и пытаются обсудить курсач",
@@ -347,6 +359,7 @@
   },
   {
     "Id": "u_zlaty-1",
+    "BackgroundMusic": "room_theme",
     "Title": "У Златы",
     "NextSceneId": "u_zlaty-2",
     "Description": "Валера и Злата пришли к ней в гости и пытаются обсудить курсач",
@@ -392,6 +405,7 @@
   },
   {
     "Id": "u_zlaty-2",
+    "BackgroundMusic": "room_theme",
     "Title": "У Златы",
     "NextSceneId": "u_zlaty-3",
     "Description": "Валера и Злата пришли к ней в гости и пытаются обсудить курсач",
@@ -422,6 +436,7 @@
   },
   {
     "Id": "u_zlaty-3",
+    "BackgroundMusic": "room_theme",
     "Title": "У Златы",
     "NextSceneId": "discord",
     "Description": "Валера и Злата пришли к ней в гости и пытаются обсудить курсач",
@@ -477,6 +492,7 @@
   },
   {
     "Id": "discord",
+    "BackgroundMusic": "discord_theme",
     "Title": "В дискорде",
     "NextSceneId": "discord-1",
     "Description": "Валера и Злата созваниваются в дисе",
@@ -502,6 +518,7 @@
   },
   {
     "Id": "discord-1",
+    "BackgroundMusic": "discord_theme",
     "Title": "В дискорде",
     "NextSceneId": "lecture",
     "Description": "Валера и Злата созваниваются в дисе",
@@ -592,6 +609,7 @@
   },
   {
     "Id": "lecture",
+    "BackgroundMusic": "main_theme",
     "Title": "На лекции",
     "NextSceneId": "lecture-1",
     "Description": "Злата на лекции, Валера опаздывает",
@@ -622,6 +640,7 @@
   },
   {
     "Id": "lecture-1",
+    "BackgroundMusic": "main_theme",
     "Title": "На лекции",
     "NextSceneId": "lecture-2",
     "Description": "Злата на лекции, Валера опаздывает",
@@ -642,6 +661,7 @@
   },
   {
     "Id": "lecture-2",
+    "BackgroundMusic": "main_theme",
     "Title": "На лекции",
     "NextSceneId": "lecture-3",
     "MiniGameType": "clicker",
@@ -673,6 +693,7 @@
   },
   {
     "Id": "lecture-3",
+    "BackgroundMusic": "main_theme",
     "Title": "На лекции",
     "NextSceneId": "lecture-4",
     "Description": "Злата на лекции, Валера опаздывает",
@@ -703,6 +724,7 @@
   },
   {
     "Id": "lecture-4",
+    "BackgroundMusic": "main_theme",
     "Title": "На лекции",
     "NextSceneId": "lecture-5",
     "Description": "Злата на лекции, Валера опаздывает",
@@ -738,6 +760,7 @@
   },
   {
     "Id": "lecture-5",
+    "BackgroundMusic": "main_theme",
     "Title": "На лекции",
     "NextSceneId": "lecture-6",
     "Description": "Злата на лекции, Валера опаздывает",
@@ -763,6 +786,7 @@
   },
   {
     "Id": "lecture-6",
+    "BackgroundMusic": "main_theme",
     "Title": "На лекции",
     "NextSceneId": "minigame",
     "Description": "Злата на лекции, Валера опаздывает",
@@ -823,6 +847,7 @@
   },
   {
     "Id": "minigame",
+    "BackgroundMusic": "saddness_theme",
     "Title": "Визуал",
     "NextSceneId": "visual",
     "MiniGameType": "puzzle",
@@ -849,6 +874,7 @@
   },
   {
     "Id": "visual",
+    "BackgroundMusic": "discord_theme",
     "Title": "Визуал",
     "NextSceneId": "visual-1",
     "Description": "Злата и Валера собираются делать визуал игры",
@@ -877,753 +903,738 @@
       "Right": ""
     }
   },
-    {
-      "Id": "visual-1",
-      "Title": "Визуал",
-      "NextSceneId": "text",
-      "Description": "Злата и Валера собираются делать визуал игры",
-      "BackgroundPath": "Res/Background_Discord.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "valera",
-          "Text": "Ну, у нас всё готово. Допиливаем текст к курсачу, и сдаем?",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Валер...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Голос Златы звучал загадочно. Валера не совсем понимал, что она собирается сказать...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Это...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "ЭТО ЖЕ ПОЛНОЕ *****",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "В КАКОМ СМЫСЛЕ?",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "ЭТО НЕЛЬЗЯ ВЫПУСКАТЬ В СВЕТ!!!",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "ЭТО ПОЧЕМУ ЕЩЕ?",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Эти нарисованные в пейнте спрайты заставляют мои глаза кровоточить...",
-          "Emote": "Happy"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "А кнопки? А диалоговые окна?",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Почему у нашей новеллы дизайн хуже, чем у ЭИОСа!!!!?????",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "А вот сейчас обидно было, рыцарь треугольного стола Златолион...",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Я убью тебя....",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Нет, так не пойдет. Срочно делаем красивый визуал!",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "Хорошо, моя Госпожа... Художник-раб к вашим услугам...",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Тем временем, до сдачи курсача оставалась неделя...",
-          "Emote": "Neutral"
-        }
+  {
+    "Id": "visual-1",
+    "BackgroundMusic": "discord_theme",
+    "Title": "Визуал",
+    "NextSceneId": "text",
+    "Description": "Злата и Валера собираются делать визуал игры",
+    "BackgroundPath": "Res/Background_Discord.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "valera",
+        "Text": "Ну, у нас всё готово. Допиливаем текст к курсачу, и сдаем?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Валер...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Голос Златы звучал загадочно. Валера не совсем понимал, что она собирается сказать...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Это...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "ЭТО ЖЕ ПОЛНОЕ *****",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "В КАКОМ СМЫСЛЕ?",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "ЭТО НЕЛЬЗЯ ВЫПУСКАТЬ В СВЕТ!!!",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "ЭТО ПОЧЕМУ ЕЩЕ?",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Эти нарисованные в пейнте спрайты заставляют мои глаза кровоточить...",
+        "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "А кнопки? А диалоговые окна?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Почему у нашей новеллы дизайн хуже, чем у ЭИОСа!!!!?????",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "А вот сейчас обидно было, рыцарь треугольного стола Златолион...",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Я убью тебя....",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Нет, так не пойдет. Срочно делаем красивый визуал!",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Хорошо, моя Госпожа... Художник-раб к вашим услугам...",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Тем временем, до сдачи курсача оставалась неделя...",
+        "Emote": "Neutral"
+      }
       ],
       "Choices": [
-        {
-          "Text": "Сделать крутой визуал любой ценой",
-          "Type": "x",
-          "Score": 15,
-          "NextSceneId": "text"
-        },
-        {
-          "Text": "Сделать простенький визуал, чтобы Валера не сдох",
-          "Type": "x",
-          "Score": 5,
-          "NextSceneId": "text"
-        },
-        {
-          "Text": "Набрать материалы из интернета",
-          "Type": "x",
-          "Score": -15,
-          "NextSceneId": "text"
-        },
-        {
-          "Text": "Переубедить Злату насчёт важности визуала",
-          "Type": "x",
-          "Score": 0,
-          "NextSceneId": "text"
-        }
-      ],
-      "CharacterLayout": {
-        "Left": "zlata",
-        "Center": "",
-        "Right": "valera"
+      {
+        "Text": "Сделать крутой визуал любой ценой",
+        "Type": "x",
+        "Score": 15,
+        "NextSceneId": "text"
+      },
+      {
+        "Text": "Сделать простенький визуал, чтобы Валера не сдох",
+        "Type": "x",
+        "Score": 5,
+        "NextSceneId": "text"
+      },
+      {
+        "Text": "Набрать материалы из интернета",
+        "Type": "x",
+        "Score": -15,
+        "NextSceneId": "text"
+      },
+      {
+        "Text": "Переубедить Злату насчёт важности визуала",
+        "Type": "x",
+        "Score": 0,
+        "NextSceneId": "text"
       }
-    },
-    {
-      "Id": "visual",
-      "Title": "Визуал",
-      "NextSceneId": "visual-1",
-      "Description": "Злата и Валера собираются делать визуал игры",
-      "BackgroundPath": "Res/Background_Discord.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Спустя длительное, тяжелое и полное препятствий время Злата и Валера смогли доделать техническую часть игры.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Теперь их новелла работала, и, ого, не взрывала компьютер при запуске!",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Они приняли решение снова созвониться в д*скорде для обсуждения дальнейшей тактики...",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "text",
-      "Title": "Текст курсача",
-      "NextSceneId": "text-1",
-      "Description": "Злата и Валера пишут текст к курсачу",
-      "BackgroundPath": "Res/Background_Zlata_Room.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Итак, рыцари Злата и Валера разобрались со всем, почти победив свой огнедышащий курсач.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Однако, оставалось ещё одно...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "...Текстовая часть.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "У них осталось 3 дня до сдачи.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Они снова собрались у Златы дома. У Валеры, кажется, была паничка, а у Златы закончилась колбаса для бутербродов.",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "text-1",
-      "Title": "Текст курсача",
-      "NextSceneId": "ending",
-      "Description": "Злата и Валера пишут текст к курсачу",
-      "BackgroundPath": "Res/Background_Zlata_Room.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "valera",
-          "Text": "3... 3 дня...",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Всё нормально, текст написать не так страшно...",
-          "Emote": "Happy"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "ФАНФИК С УЧАСТИЕМ *** И **** НАПИСАТЬ НЕ ТАК СТРАШНО...",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "А ВОТ КУРСАЧ...",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "ВАЛЕРА ХВАТИТ!!!",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "Yes my queen sorry my queen",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Сейчас спокойно разберемся!",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Злата открыла Word на своем суперском ноутбуке...",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [
-        {
-          "Text": "Перечитать лекции и написать текст",
-          "Type": "x",
-          "Score": 15,
-          "NextSceneId": "ending"
-        },
-        {
-          "Text": "Порыскать в интернете и написать текст",
-          "Type": "x",
-          "Score": 5,
-          "NextSceneId": "ending"
-        },
-        {
-          "Text": "Нагенерить весь текст нейронкой",
-          "Type": "x",
-          "Score": -15,
-          "NextSceneId": "ending"
-        },
-        {
-          "Text": "Купить текст у анонимуса",
-          "Type": "x",
-          "Score": 0,
-          "NextSceneId": "ending"
-        }
-      ],
-      "CharacterLayout": {
-        "Left": "zlata",
-        "Center": "",
-        "Right": "valera"
-      }
-    },
-    {
-      "Id": "ending",
-      "Title": "Сдача курсача",
-      "NextSceneId": "ending-1",
-      "Description": "Настал день сдачи курсача",
-      "BackgroundPath": "Res/Background_Door.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Этот день настал.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Все мы знали, что он неизбежен.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Валера со Златой стояли у двери кибертюрьмы, молясь всем хтоническим богам о пощаде.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Сделав пару вдохов и выдохов, Валера открыл дверь в неизбежное...",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "ending-1",
-      "Title": "Сдача курсача",
-      "NextSceneId": "ending-2",
-      "Description": "Настал день сдачи курсача",
-      "BackgroundPath": "Res/Background_Polegon.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "max",
-          "Text": "Приветствую вас, рыцари треугольного стола!",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "alex",
-          "Text": "Да начнется ваше испытание!",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "alex",
-          "Text": "Ну, что вы нам тут принесли?",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Злата трясущимися ручонками передала стопку листов с курсачем Alex'у...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Пока Валера, не попадая по кнопкам клавиатуры, открывал их новеллу на компе.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Верховные архидемоны смотрели на студентов, испепеляя их нежные душонки своим пламенным взором.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "И вот, новелла была открыта.",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "max",
-        "Center": "",
-        "Right": "alex"
-      }
-    },
-    {
-      "Id": "ending-2",
-      "Title": "Сдача курсача",
-      "NextSceneId": "ending-3",
-      "Description": "Настал день сдачи курсача",
-      "BackgroundPath": "Res/Background_Polegon.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Они провели за обсуждением курсача какое-то время, попытали Валеру со Златой разными вопросами, похихикали о чём то между собой, после чего...",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "ending-3",
-      "Title": "Сдача курсача",
-      "NextSceneId": "ending-4",
-      "Description": "Настал день сдачи курсача",
-      "BackgroundPath": "Res/Background_Polegon.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "max",
-          "Text": "Нам нужно обсудить всё наедине.",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "alex",
-          "Text": "Вы можете подождать за дверью...",
-          "Emote": "Sad"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "max",
-        "Center": "",
-        "Right": "alex"
-      }
-    },
-    {
-      "Id": "ending-4",
-      "Title": "Сдача курсача",
-      "NextSceneId": "ending-5",
-      "Description": "Настал день сдачи курсача",
-      "BackgroundPath": "Res/Background_Door.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Наших воинов выперли за дверь.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Они тихо притаились, смотря друг на друга, и прислушиваясь к тому, о чем шепчутся Max и Alex в кибераду...",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "ending-5",
-      "Title": "Сдача курсача",
-      "NextSceneId": "ending-6",
-      "Description": "Настал день сдачи курсача",
-      "BackgroundPath": "Res/Background_Door.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "zlata",
-          "Text": "И что с нами будет?",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "Мы умрём.",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Вообще-то это моя реплика...",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "И что с нами будет?",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Мы умрём...",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "ВСЕ Я ТАК БОЛЬШЕ НЕ МОГУ",
-          "Emote": "Sad"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Злата взяла Валеру за руку, и посмотрела ему в глаза в попытке вселить в него веру и надежду, хоть сама и была напугана.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Спустя пару секунд молчания, она воодушевляюще выдала...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Тройку точно поставят – значит хотя бы не отчислимся...",
-          "Emote": "Angry"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "Успокоила...)))",
-          "Emote": "Happy"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Они ещё немного помолчали.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "zlata",
-          "Text": "Кстати, а почему мы рыцари треугольного стола? Типо, ты, я, а кто третий то?",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "valera",
-          "Text": "Ну, потому что...",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "zlata",
-        "Center": "",
-        "Right": "valera"
-      }
-    },
-    {
-      "Id": "ending-6",
-      "Title": "Сдача курсача",
-      "NextSceneId": "go_to_ending",
-      "Description": "Настал день сдачи курсача",
-      "BackgroundPath": "Res/Background_Door_Light.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Их прервала внезапно распахнувшаяся дверь, в которой стояли Max и Alex.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Рыцари треугольного стола переглянулись.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "А затем...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Приговор был вынесен.",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "best",
-      "Title": "Счастливая концовка",
-      "NextSceneId": "credits",
-      "BackgroundPath": "Res/Background_Best.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "В итоге они все сдали на отлично.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Только зря переживали.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Ушли счастливые с допуском к завтрашнему экзамену, отметили сырной пиццей с додобонами.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "И жили они долго и счастливо...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Изи катка.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Стоп.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "А они успели подготовиться к экзамену?..",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Конец.",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "good",
-      "Title": "Хорошая концовка",
-      "NextSceneId": "credits",
-      "BackgroundPath": "Res/Background_Good.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "В итоге Злате и Валере поставили четвёрки.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Это был достойный результат, и они гордились друг другом...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Они отметили это бутербродами с колбасой и сыром",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "(без помидоров)",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "и тем самым ознаменовали завершение своих страданий!",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Конец.",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "bad",
-      "Title": "Плохая концовка",
-      "NextSceneId": "credits",
-      "BackgroundPath": "Res/Background_Bad.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Им и вправду поставили тройки.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Не сказать, что они убивались из-за этого...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Валера был немного расстроен из-за своего синдрома отличника, Злата утешала, что самое главное - это то, что они не отчислены.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "И в целом она была права!",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Конец.",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "secret",
-      "Title": "Плохая концовка",
-      "NextSceneId": "credits",
-      "BackgroundPath": "Res/Background_Secret.png",
-      "Dialogue": [
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Они не сдали.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Это конец.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Рыцари треугольного стола не выдержали такого удара и пали, подав документы на отчисление.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Они пытались...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Но ПиОГИ оказались сильнее.",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "...",
-          "Emote": "Neutral"
-        },
-        {
-          "SpeakerId": "storyteller",
-          "Text": "Конец.",
-          "Emote": "Neutral"
-        }
-      ],
-      "Choices": [],
-      "CharacterLayout": {
-        "Left": "",
-        "Center": "",
-        "Right": ""
-      }
-    },
-    {
-      "Id": "credits",
-      "Title": "Титры",
-      "BackgroundPath": "Res/Background_Credits.png",
-      "Dialogue": [],
-      "Choices": [],
-      "NextSceneId": "show_credits_overlay"
+    ],
+    "CharacterLayout": {
+      "Left": "zlata",
+      "Center": "",
+      "Right": "valera"
     }
+    },
+  {
+    "Id": "text",
+    "BackgroundMusic": "room_theme",
+    "Title": "Текст курсача",
+    "NextSceneId": "text-1",
+    "Description": "Злата и Валера пишут текст к курсачу",
+    "BackgroundPath": "Res/Background_Zlata_Room.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Итак, рыцари Злата и Валера разобрались со всем, почти победив свой огнедышащий курсач.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Однако, оставалось ещё одно...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "...Текстовая часть.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "У них осталось 3 дня до сдачи.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Они снова собрались у Златы дома. У Валеры, кажется, была паничка, а у Златы закончилась колбаса для бутербродов.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "text-1",
+    "BackgroundMusic": "room_theme",
+    "Title": "Текст курсача",
+    "NextSceneId": "ending",
+    "Description": "Злата и Валера пишут текст к курсачу",
+    "BackgroundPath": "Res/Background_Zlata_Room.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "valera",
+        "Text": "3... 3 дня...",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Всё нормально, текст написать не так страшно...",
+        "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "ФАНФИК С УЧАСТИЕМ *** И **** НАПИСАТЬ НЕ ТАК СТРАШНО...",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "А ВОТ КУРСАЧ...",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "ВАЛЕРА ХВАТИТ!!!",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Yes my queen sorry my queen",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Сейчас спокойно разберемся!",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Злата открыла Word на своем суперском ноутбуке...",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [
+      {
+        "Text": "Перечитать лекции и написать текст",
+        "Type": "x",
+        "Score": 15,
+        "NextSceneId": "ending"
+      },
+      {
+        "Text": "Порыскать в интернете и написать текст",
+        "Type": "x",
+        "Score": 5,
+        "NextSceneId": "ending"
+      },
+      {
+        "Text": "Нагенерить весь текст нейронкой",
+        "Type": "x",
+        "Score": -15,
+        "NextSceneId": "ending"
+      },
+      {
+        "Text": "Купить текст у анонимуса",
+        "Type": "x",
+        "Score": 0,
+        "NextSceneId": "ending"
+      }
+    ],
+    "CharacterLayout": {
+      "Left": "zlata",
+      "Center": "",
+      "Right": "valera"
+    }
+  },
+  {
+    "Id": "ending",
+    "BackgroundMusic": "scary_theme",
+    "Title": "Сдача курсача",
+    "NextSceneId": "ending-1",
+    "Description": "Настал день сдачи курсача",
+    "BackgroundPath": "Res/Background_Door.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Этот день настал.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Все мы знали, что он неизбежен.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Валера со Златой стояли у двери кибертюрьмы, молясь всем хтоническим богам о пощаде.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Сделав пару вдохов и выдохов, Валера открыл дверь в неизбежное...",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "ending-1",
+    "BackgroundMusic": "main_theme",
+    "Title": "Сдача курсача",
+    "NextSceneId": "ending-2",
+    "Description": "Настал день сдачи курсача",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "max",
+        "Text": "Приветствую вас, рыцари треугольного стола!",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "alex",
+        "Text": "Да начнется ваше испытание!",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "alex",
+        "Text": "Ну, что вы нам тут принесли?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Злата трясущимися ручонками передала стопку листов с курсачем Alex'у...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Пока Валера, не попадая по кнопкам клавиатуры, открывал их новеллу на компе.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Верховные архидемоны смотрели на студентов, испепеляя их нежные душонки своим пламенным взором.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "И вот, новелла была открыта.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "max",
+      "Center": "",
+      "Right": "alex"
+    }
+  },
+  {
+    "Id": "ending-2",
+    "BackgroundMusic": "main_theme",
+    "Title": "Сдача курсача",
+    "NextSceneId": "ending-3",
+    "Description": "Настал день сдачи курсача",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Они провели за обсуждением курсача какое-то время, попытали Валеру со Златой разными вопросами, похихикали о чём то между собой, после чего...",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "ending-3",
+    "BackgroundMusic": "main_theme",
+    "Title": "Сдача курсача",
+    "NextSceneId": "ending-4",
+    "Description": "Настал день сдачи курсача",
+    "BackgroundPath": "Res/Background_Polegon.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "max",
+        "Text": "Нам нужно обсудить всё наедине.",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "alex",
+        "Text": "Вы можете подождать за дверью...",
+        "Emote": "Sad"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "max",
+      "Center": "",
+      "Right": "alex"
+    }
+  },
+  {
+    "Id": "ending-4",
+    "BackgroundMusic": "scary_theme",
+    "Title": "Сдача курсача",
+    "NextSceneId": "ending-5",
+    "Description": "Настал день сдачи курсача",
+    "BackgroundPath": "Res/Background_Door.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Наших воинов выперли за дверь.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Они тихо притаились, смотря друг на друга, и прислушиваясь к тому, о чем шепчутся Max и Alex в кибераду...",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "ending-5",
+    "BackgroundMusic": "scary_theme",
+    "Title": "Сдача курсача",
+    "NextSceneId": "ending-6",
+    "Description": "Настал день сдачи курсача",
+    "BackgroundPath": "Res/Background_Door.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "zlata",
+        "Text": "И что с нами будет?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Мы умрём.",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Вообще-то это моя реплика...",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "И что с нами будет?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Мы умрём...",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "ВСЕ Я ТАК БОЛЬШЕ НЕ МОГУ",
+        "Emote": "Sad"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Злата взяла Валеру за руку, и посмотрела ему в глаза в попытке вселить в него веру и надежду, хоть сама и была напугана.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Спустя пару секунд молчания, она воодушевляюще выдала...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Тройку точно поставят – значит хотя бы не отчислимся...",
+        "Emote": "Angry"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Успокоила...)))",
+        "Emote": "Happy"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Они ещё немного помолчали.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "zlata",
+        "Text": "Кстати, а почему мы рыцари треугольного стола? Типо, ты, я, а кто третий то?",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "valera",
+        "Text": "Ну, потому что...",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "zlata",
+      "Center": "",
+      "Right": "valera"
+    }
+  },
+  {
+    "Id": "ending-6",
+    "BackgroundMusic": "scary_theme",
+    "Title": "Сдача курсача",
+    "NextSceneId": "go_to_ending",
+    "Description": "Настал день сдачи курсача",
+    "BackgroundPath": "Res/Background_Door_Light.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Их прервала внезапно распахнувшаяся дверь, в которой стояли Max и Alex.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Рыцари треугольного стола переглянулись.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "А затем...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Приговор был вынесен.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "best",
+    "BackgroundMusic": "best_theme",
+    "Title": "Счастливая концовка",
+    "NextSceneId": "credits",
+    "BackgroundPath": "Res/Background_Best.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "В итоге они все сдали на отлично.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Только зря переживали.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Ушли счастливые с допуском к завтрашнему экзамену, отметили сырной пиццей с додобонами.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "И жили они долго и счастливо...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Изи катка.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Стоп.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "А они успели подготовиться к экзамену?..",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Конец.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "good",
+    "BackgroundMusic": "good_theme",
+    "Title": "Хорошая концовка",
+    "NextSceneId": "credits",
+    "BackgroundPath": "Res/Background_Good.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "В итоге Злате и Валере поставили четвёрки.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Это был достойный результат, и они гордились друг другом...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Они отметили это бутербродами с колбасой и сыром",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "(без помидоров)",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "и тем самым ознаменовали завершение своих страданий!",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Конец.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "bad",
+    "BackgroundMusic": "bad_theme",
+    "Title": "Плохая концовка",
+    "NextSceneId": "credits",
+    "BackgroundPath": "Res/Background_Bad.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Им и вправду поставили тройки.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Не сказать, что они убивались из-за этого...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Валера был немного расстроен из-за своего синдрома отличника, Злата утешала, что самое главное - это то, что они не отчислены.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "И в целом она была права!",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Конец.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "secret",
+    "BackgroundMusic": "secret_theme",
+    "Title": "Плохая концовка",
+    "NextSceneId": "credits",
+    "BackgroundPath": "Res/Background_Secret.png",
+    "Dialogue": [
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Они не сдали.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Это конец.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Рыцари треугольного стола не выдержали такого удара и пали, подав документы на отчисление.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Они пытались...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Но ПиОГИ оказались сильнее.",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "...",
+        "Emote": "Neutral"
+      },
+      {
+        "SpeakerId": "storyteller",
+        "Text": "Конец.",
+        "Emote": "Neutral"
+      }
+    ],
+    "Choices": [],
+    "CharacterLayout": {
+      "Left": "",
+      "Center": "",
+      "Right": ""
+    }
+  },
+  {
+    "Id": "credits",
+    "BackgroundMusic": "main_theme",
+    "Title": "Титры",
+    "BackgroundPath": "Res/Background_Credits.png",
+    "Dialogue": [],
+    "Choices": [],
+    "NextSceneId": "show_credits_overlay"
+  }
 ]

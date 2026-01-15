@@ -9,6 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Audio\AnimationVsMath.mp3" />
+    <None Remove="Audio\Asgore.mp3" />
+    <None Remove="Audio\DiscordHalloween2022.mp3" />
+    <None Remove="Audio\FallenDown.mp3" />
+    <None Remove="Audio\MioMao.mp3" />
+    <None Remove="Audio\Ooo.mp3" />
+    <None Remove="Audio\Sans.mp3" />
+    <None Remove="Audio\Shop.mp3" />
+    <None Remove="Audio\Toby Fox - ASGORE %28Undertale OST%29 [audiovk.com].mp3" />
+    <None Remove="Audio\Toby Fox - Fallen Down %28Undertale OST%29 [audiovk.com].mp3" />
+    <None Remove="Audio\Toby Fox - Ooo %28Undertale OST%29 [audiovk.com].mp3" />
+    <None Remove="Audio\Toby Fox - sans. %28Undertale OST%29 [audiovk.com].mp3" />
+    <None Remove="Audio\Toby Fox - Shop %28Undertale OST%29 [audiovk.com].mp3" />
+    <None Remove="Audio\смешарики.mp3" />
     <None Remove="Elements\Background_Clicker.png" />
     <None Remove="Elements\Background_Credits.png" />
     <None Remove="Elements\Background_Puzzle.png" />
@@ -54,6 +68,33 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Audio\AnimationVsMath.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\Asgore.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\DiscordHalloween2022.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\FallenDown.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\MioMao.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\Ooo.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\Sans.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\Shop.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Audio\смешарики.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Elements\Background_Clicker.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

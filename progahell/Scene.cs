@@ -15,6 +15,8 @@ namespace progahell
         string backgroundPath;
         string id;
         string nextSceneId;
+        string backgroundMusic;
+
         private Dictionary<CharacterPosition, string> characterLayout = new();
         public string MiniGameType { get; private set; } = "none"; // по умолчанию
         public List<Choice> Choices { get; } = new List<Choice>();
@@ -24,19 +26,22 @@ namespace progahell
         public Dictionary<CharacterPosition, string> CharacterLayout => characterLayout;
 
         public string Title
-        { get { return title; } set { title = value; } }
+        { get { return title; } private set { title = value; } }
 
         public string Description
-        { get { return description; } set { description = value; } }
+        { get { return description; } private set { description = value; } }
 
         public string BackgroundPath
-        { get { return backgroundPath; } set { backgroundPath = value; } }
+        { get { return backgroundPath; } private set { backgroundPath = value; } }
 
         public string Id
-        { get { return id; } set { id = value; } } //попробуй тут везде приваточки влепить
+        { get { return id; } private set { id = value; } } //попробуй тут везде приваточки влепить
 
         public string NextSceneId
-        { get { return nextSceneId; } set { nextSceneId = value; } }
+        { get { return nextSceneId; } private set { nextSceneId = value; } }
+
+        public string BackgroundMusic 
+        { get { return backgroundMusic; } set { backgroundMusic = value; } }
 
         public Scene(string id, string title, string description, string backgroundPath, string nextSceneId)
         {
@@ -45,7 +50,8 @@ namespace progahell
             Description = description;
             BackgroundPath = backgroundPath;
             NextSceneId = nextSceneId;
-            
+            BackgroundMusic = "";
+
         }
         public void SetMiniGameType(string type)
         {

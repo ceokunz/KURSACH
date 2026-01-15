@@ -22,6 +22,7 @@ namespace progahell
     {
         private SceneManager sceneManager = new();
         private CharacterManager characterManager = new();
+        private readonly MusicManager _musicManager = new();
         public ScoreCalculator ScoreCalculator { get; set; } = new();
 
         private List<DialogueLine> currentDialogue = new();
@@ -90,6 +91,7 @@ namespace progahell
             foreach (var s in sceneList)
             {
                 Scene scene = new Scene(s.Id, s.Title, s.Description, s.BackgroundPath, s.NextSceneId);
+                scene.BackgroundMusic = s.BackgroundMusic;
 
                 scene.Dialogue = s.Dialogue ?? new List<DialogueLine>();
 
@@ -148,14 +150,12 @@ namespace progahell
                 var character = characterManager.GetCharacter(charId);
                 if (character != null)
                 {
-                    character.SetEmote(EmoteType.Neutral); // ← сброс к нейтральной
+                    character.SetEmote(EmoteType.Neutral);
                 }
             }
 
-            // Сбрасываем спрайты (скрываем)
             ClearCharacterPositions();
 
-            // Показываем персонажей с НЕЙТРАЛЬНОЙ эмоцией
             foreach (var layout in scene.CharacterLayout)
             {
                 var position = layout.Key;
@@ -167,6 +167,8 @@ namespace progahell
                     SetCharacterSprite(position, character.CurrentSpritePath);
                 }
             }
+
+            _musicManager.PlayTrack(scene.BackgroundMusic); //кач кач делаем кач кач если не получится я убиваю себя пистолетом
 
             // сброс диалог
             currentDialogueIndex = 0; 
@@ -358,6 +360,7 @@ namespace progahell
             currentDialogue.Clear();
             currentDialogueIndex = 0;
             isShowingChoices = false;
+            _musicManager.Stop();
 
             EndingOverlay.Visibility = Visibility.Collapsed;
             BackToMenuButton.Visibility = Visibility.Collapsed;
@@ -431,6 +434,11 @@ namespace progahell
 
             translateTransform.BeginAnimation(TranslateTransform.YProperty, bounceY);
         }
+
+        private void CloseGameButton_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
     public class CharacterJsonModel
     {
@@ -442,6 +450,7 @@ namespace progahell
     public class SceneJsonModel
     {
         public string Id { get; set; } = "";
+        public string BackgroundMusic { get; set; } = "";
         public string Title { get; set; } = "";
         public string Description { get; set; } = "";
         public string BackgroundPath { get; set; } = "";
