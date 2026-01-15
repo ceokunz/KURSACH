@@ -12,10 +12,13 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Media.Animation;
 using System.Windows.Threading;
+using System;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 
 namespace progahell
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, INotifyPropertyChanged
     {
         private SceneManager sceneManager = new();
         private CharacterManager characterManager = new();
@@ -25,14 +28,44 @@ namespace progahell
         private int currentDialogueIndex = 0;
 
         private bool isShowingChoices = false;
+
+        private string speakerName = "";
+        private string currentDialogueText = "";
+
+        public string SpeakerName
+        {
+            get => speakerName;
+            set
+            {
+                speakerName = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string CurrentDialogueText
+        {
+            get => currentDialogueText;
+            set
+            {
+                currentDialogueText = value;
+                OnPropertyChanged();
+            }
+        }
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = this;
             LoadGameData();
 
             sceneManager.SceneChanged += OnSceneChanged;
             
             StartTitleAnimation();
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
         private void LoadGameData()
@@ -189,8 +222,11 @@ namespace progahell
                 var line = currentDialogue[currentDialogueIndex];
                 Character speaker = characterManager.GetCharacter(line.SpeakerId);
 
-                SpeakerNameBlock.Text = speaker?.Name ?? "???";
-                DialogueTextBlock.Text = line.Text;
+                SpeakerName = speaker?.Name ?? "???";
+                CurrentDialogueText = line.Text;
+
+                var fadeIn = new DoubleAnimation(0, 1, TimeSpan.FromSeconds(0.4));
+                DialogueTextBlock.BeginAnimation(UIElement.OpacityProperty, fadeIn);
 
                 // обновляем эмоцию спикера
                 if (speaker != null)

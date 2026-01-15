@@ -92,7 +92,7 @@
                             </Grid.RowDefinitions>
                             
                             <TextBlock x:Name="SpeakerNameBlock"
-                           Text=""
+                           Text="{Binding SpeakerName}"
                            FontSize="50"
                            FontWeight="Bold"
                            Foreground="White"
@@ -100,8 +100,9 @@
                            VerticalAlignment="Bottom"
                            Margin="0,0,0,10"/>
     
-                            <TextBlock x:Name="DialogueTextBlock"
-                                       Text="fdsfjnsf"
+                           <TextBlock x:Name="DialogueTextBlock"
+                           Text="{Binding CurrentDialogueText}"
+                           Opacity="0"
                            Grid.Row="1"
                            FontSize="40"
                            TextWrapping="Wrap"
@@ -119,7 +120,7 @@
                             VerticalAlignment="Bottom"/>
                             </Grid>
 
-                            <TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>
+                            <!--<TextBlock FontSize="50" Background="Aqua" Text="{Binding ScoreCalculator.TotalScore, RelativeSource={RelativeSource AncestorType=Window}}"></TextBlock>-->
 
                         </Grid>
                     </Grid>

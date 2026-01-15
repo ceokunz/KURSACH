@@ -2,7 +2,7 @@
   {
     "Id": "start",
     "Title": "Начало",
-    "NextSceneId": "lecture-6",
+    "NextSceneId": "start-0",
     "Description": "Вы получаете задание на курсач",
     "BackgroundPath": "Res/Background_Polegon.png",
     "Dialogue": [

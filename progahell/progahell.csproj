@@ -21,6 +21,7 @@
     <None Remove="Res\A_neutral.PNG" />
     <None Remove="Res\A_sad.PNG" />
     <None Remove="Res\Background_Bad.png" />
+    <None Remove="Res\Background_Best.PNG" />
     <None Remove="Res\Background_Blackout.png" />
     <None Remove="Res\Background_Bus.png" />
     <None Remove="Res\Background_Discord.png" />
@@ -120,6 +121,9 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\Background_Zlata_Room.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Res\Background_Best.PNG">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Res\MaxAlexTogether.png">
